@@ -155,7 +155,7 @@
 
 // Sumario de contenidos
 .content-summary {
-	@include max-width($bp2);
+	@include max-width($bp1);
 	min-height: 500px;
 	display: table;
 	@extend %padding-top;
@@ -206,3 +206,23 @@
 		margin-top: $paddingbase / 2;
 		margin-bottom: 0;
 	}
+
+
+
+// Componente Tienda
+.tienda {
+	
+	@extend %padding-vertical;
+	@include max-width($bp1);
+	background-color: $white;
+}
+
+.tienda__item {
+	max-height:730px;
+	@extend %text-center;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+

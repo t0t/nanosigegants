@@ -312,10 +312,13 @@
 
 
     <?php elseif(get_row_layout() == "tienda"): // tienda ?>
-                
-    <h2>tienda</h2>
+    
 
-    <section>
+
+
+    <section class="tienda">
+
+    <h2>tienda</h2>
 
     <?php
     // check if the repeater field has rows of data
@@ -326,12 +329,12 @@
             ?>
             
                 
-            <ul>
+            <div class="grid">
             
             <?php while(has_sub_field('productos')): ?>  
             
-            <li>
-            <h4><?php the_sub_field('nom'); ?></h4>
+            <div class="tienda__item">
+            <h3><?php the_sub_field('nom'); ?></h3>
 
         <?php $image = get_sub_field('imatge');
         echo '<img src="'.$image['sizes']['medium'].'" />'; ?>
@@ -339,10 +342,12 @@
         <p><?php the_sub_field('preu'); ?>€</p>
         <small>+ 1&#8364; de gastos d&#8217;enviament</small>
         <?php the_sub_field('boto_paypal'); ?>
-            </li>
+
+            </div>
                                         
             <?php endwhile; ?>
-            </ul>
+
+            </div>
 
             <?
         endwhile;
