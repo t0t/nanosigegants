@@ -109,7 +109,7 @@ Main navbar
   @extend %full-width;
   max-width: $bp1;
   background-color: $black;
-  border-radius: 10px;
+  border-radius: $radius;
 
   @media all and (min-width: $bp3) {
     min-height: 57px;

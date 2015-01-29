@@ -22,6 +22,7 @@
 
         <div class="grid-content__item">
             <img src="<?php the_sub_field("image"); ?>" alt="">
+            <p><?php the_sub_field("address"); ?></p>
         </div>
         <div class="grid-content__item">
             <?php echo do_shortcode('[contact-form-7 id="313" title="Formulari de contacte"]'); ?>
@@ -181,16 +182,23 @@
     <?php elseif(get_row_layout() == "video"): // Layout Videos ?>
 
     <?php if(get_sub_field('video_repeater')): ?>
+
     <?php while(has_sub_field('video_repeater')): ?>  
 
     <section class="video-main">
-
+        
+        <h2 class="video-main__header">Video</h2>
+        
         <?php if (get_sub_field("video")): ?>
             <div class="video-main__iframe"><?php the_sub_field("video"); ?></div>
         <?php endif ?>
 
         <?php if (get_sub_field("descripcion")): ?>
-            <h5 class="video-main__description"><?php the_sub_field("descripcion"); ?></h5>
+            <p class="video-main__description"><?php the_sub_field("descripcion"); ?></p>
+        <?php endif ?>
+
+        <?php if (get_sub_field("btn")): ?>
+            <a class="btn btn--invert" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
         <?php endif ?>
 
     </section>
@@ -203,34 +211,44 @@
     <?php elseif(get_row_layout() == "post-carrousel"): // Posts Carousel ?>
     <?php 
         $loop = new WP_Query( array( 
-            'post_type' => 'post',
-            'category_name' => '',
+            'post_type' => '',
+            'category_name' => 'noticies',
             'posts_per_page' => '3'
             )); 
     ?>
 
 <section class="slider">
 
-  <h2><?php the_sub_field("title"); ?></h2>
-  <?php //the_sub_field("description"); ?>
-    
+    <?php the_sub_field("title"); ?>
+    <?php the_sub_field("description"); ?>
 
     <ul>
 
     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
       
         <li class="slider__item">
-          
+
         <? if ( has_post_thumbnail() ) { ?>
 
-            <a href="<?php the_permalink(); ?>">
-                <figure class="slider__figure">
+            <article class="article-post--slider">
+
+                <figure class="slider__figure article-post--slider__figure">
                     <?php the_post_thumbnail('medium'); ?>
-                    <figcaption class="slider__caption"><?php the_title(); ?></figcaption>
                 </figure>
-            </a>
-                
-            <?}else {?>
+
+                <div class="article-post--slider__content">
+
+                    <p class="article-post--slider__meta-date"><?php the_date('l, j F Y'); ?></p>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php the_excerpt(); ?></p>
+                    <a class="btn" href="<?php the_permalink(); ?>">Noticia completa &rarr;</a>
+
+                </div>
+
+            </article>
+
+        <?}else {?>
+
             <a href="<?php the_permalink(); ?>">
                 <figure class="slider__figure">
                     <img src="<?php echo get_bloginfo('template_directory');?>/assets/img/logo.svg" alt="logo">
@@ -325,6 +343,48 @@
                                         
             <?php endwhile; ?>
             </ul>
+
+            <?
+        endwhile;
+
+    else :
+    // no rows found
+    endif;
+
+    ?>
+    </section>
+
+
+    <?php elseif(get_row_layout() == "content_summary"): // Sumario de contenido ?>
+                
+    <section class="content-summary">
+
+    <?php
+    // check if the repeater field has rows of data
+    if( have_rows('lista') ):
+
+        // loop through the rows of data
+        while ( have_rows('lista') ) : the_row();
+            ?>
+                        
+            <?php while(has_sub_field('apartado')): ?>  
+            
+                <div class="content-summary__item">
+
+                    <?php
+                        $image = get_sub_field('img');
+                        echo '<img src="'.$image['sizes']['medium'].'" />';
+                    ?>
+
+                    <h3><?php the_sub_field('title'); ?></h3>
+
+                    <p><?php the_sub_field('text'); ?></p>
+
+                    <a class="btn" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
+            
+                </div>
+                                        
+            <?php endwhile; ?>
 
             <?
         endwhile;

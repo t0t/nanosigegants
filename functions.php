@@ -21,6 +21,13 @@ register_sidebar( array(
 	'after_title' => '</h2>',
 ) );
 
+// Allows svg load into media uploader 
+//http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader
+// function cc_mime_types($mimes) {
+//   $mimes['svg'] = 'image/svg+xml';
+//   return $mimes;
+// }
+// add_filter('upload_mimes', 'cc_mime_types');
 
 /**
  * Custom functions

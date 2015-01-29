@@ -5,11 +5,12 @@
 	align-content: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: $color-alt;
+	background-color: $color-base;
   	padding: $gutterwidth;
 
   	@media (min-width:950px) {
 		flex-direction: row;
+		min-height: 217px;
   	}
 	
 	li {
@@ -25,7 +26,8 @@
 
 	.main-footer__list { 
 		display: table;
-		width: 50%;
+		width: 15%;
+		flex-grow: 1;
 		margin: 0;
 		padding: 0;
 
@@ -34,14 +36,14 @@
 
 			a {
 			transition: all .5s ease;
-			color: darken($color-alt, 10%);
+			color: $black;
 
 				&:hover {
-					color: darken($color-alt, 25%);
+					color: $white;
 				}
 
 		  		&::before {
-		  			font-size: 3.5rem;
+		  			font-size: 1.5rem;
 		  			margin-right: 10px;
 		  		}
 			}
@@ -50,6 +52,7 @@
 
 	.main-footer__credits {
 		flex: 2;
+
 		aside {
 			margin-top: $gutterwidth;
 		}
@@ -57,10 +60,42 @@
 		a, a:visited {
 			color: $linkcolorfooter;
 		}
+
 		a:hover {
 			text-decoration: underline;
 		}
-		a i:hover {
-			
+
+		a i:hover {}
+	}
+
+	.main-footer__brand {
+		@extend %text-center;
+		flex-grow: 2;
+		img {  
+			width: 100px;
+			height: auto;
+		}
+	}
+
+	.main-footer__brand__name {
+		font-family: $altfont;
+		text-align: center;
+		margin-bottom: 0;
+		font-size: 1.2rem;
+		letter-spacing: $baseletterspacing;
+		font-style: italic;
+		color: $white;
+	}
+
+	.main-footer__searchform {
+		// flex-grow: 1;
+		.screen-reader-text {
+			display: none;
+		}
+		input {
+			width: 75%;
+		}
+		form {
+			margin-bottom: 0;
 		}
 	}

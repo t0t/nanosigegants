@@ -152,11 +152,50 @@
 		//background-image: url("assets/img/logo.svg")
 	}
 
+
+// Sumario de contenidos
+.content-summary {
+	@include max-width($bp2);
+	min-height: 500px;
+	display: table;
+	@extend %padding-top;
+	background-color: $white;
+	
+	
+	h3 {
+		@extend %lowercase;
+		color: $color-base;
+		margin-bottom: $gutterwidth;
+	}
+
+	img {
+		width: 200px;
+		height: auto;
+	}
+}
+	.content-summary__item {
+		width: 33%;
+		display: table-cell;
+		@extend %text-center;
+
+		p {
+			margin-bottom: $gutterwidth;
+			@extend %line-height-smaller;
+		}
+	}
+
+
 // Video
 .video-main {
 	@extend %padding-vertical;
+	@extend %text-center;
 	background-color: $black;
+
 }
+	.video-main__header {
+		color: $white;
+		margin-bottom: $gutterwidth;
+	}
 	.video-main__iframe {
 		@include max-width(560px);
 	}
