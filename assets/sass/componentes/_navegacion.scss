@@ -7,7 +7,6 @@ Main navbar
 
 //Navegacion principal
 .nav-main {
-  font-size: 20px;
 
   a {
       padding: $gutterwidth;
@@ -106,8 +105,12 @@ Main navbar
 // Nav Header
 .nav-header {
   @extend %display-table;
+  margin: 0 auto;
   @extend %full-width;
+  max-width: $bp1;
   background-color: $black;
+  border-radius: 10px;
+
   @media all and (min-width: $bp3) {
     min-height: 57px;
   }
@@ -115,23 +118,22 @@ Main navbar
   li ul {
     display: none;
   }
-
-} 
+  
   .nav-header__item, li {
     display: table-cell;
     width: 8%;
     @extend %text-center; 
     vertical-align: middle;
+    @extend %lowercase;
+    font-size: 1.2rem;
+    font-weight: $baseheadingfontweight;
+
+    a, a:visited {
+      color: $white;
+    }
   }
 
-
-
-
-
-
-
-
-
+} 
 
 
 

@@ -39,13 +39,11 @@ $link-horizontal-padding:20px;
 // $basefont 					: "Lato", sans-serif;
 // $basefont 					: Helvetica, Arial, sans-serif;
 $googlefont 				: "http://fonts.googleapis.com/css?family=Almendra:400,400italic";
-$altfont 					: "Arial", serif;
+$altfont 					: 'Almendra', serif;
 $codefont 					: "Courier New", monospace;
-$googlefont2				: "http://fonts.googleapis.com/css?family=Open+Sans:300";
-$basefont				: "Almendra", serif;
-$google-font2 				: "Almendra", cursive;
-$baseheadingfont 			: $google-font2;
-$baseheadingfontweight 		: 700;
+$basefont				: $altfont;
+$baseheadingfont 			: $basefont;
+$baseheadingfontweight 		: 400;
 
 $altlineheight : 1.35em;
 // $icons	: icomoon;
@@ -54,7 +52,7 @@ $altlineheight : 1.35em;
 /*------------------------------------*\
     $TAMAÑOS
 \*------------------------------------*/
-$basefontsize 		: 23 !default;
+$basefontsize 		: 20 !default;
 $baseletterspacing 	: 1px;
 
 

@@ -7,6 +7,10 @@
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
+%lowercase {
+  text-transform: lowercase;
+}
+
 %basepadding {
   padding: $gutterwidth $gutterwidth + 4;
 }

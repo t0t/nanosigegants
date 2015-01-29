@@ -24,7 +24,7 @@
             <img src="<?php the_sub_field("image"); ?>" alt="">
         </div>
         <div class="grid-content__item">
-            <?php echo do_shortcode('[contact-form-7 id="575" title="Contacto"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="313" title="Formulari de contacte"]'); ?>
         </div>
 
 
@@ -293,6 +293,48 @@
     </section>
 
 
+    <?php elseif(get_row_layout() == "tienda"): // tienda ?>
+                
+    <h2>tienda</h2>
+
+    <section>
+
+    <?php
+    // check if the repeater field has rows of data
+    if( have_rows('lista') ):
+
+        // loop through the rows of data
+        while ( have_rows('lista') ) : the_row();
+            ?>
+            
+                
+            <ul>
+            
+            <?php while(has_sub_field('productos')): ?>  
+            
+            <li>
+            <h4><?php the_sub_field('nom'); ?></h4>
+
+        <?php $image = get_sub_field('imatge');
+        echo '<img src="'.$image['sizes']['medium'].'" />'; ?>
+
+        <p><?php the_sub_field('preu'); ?>€</p>
+        <small>+ 1&#8364; de gastos d&#8217;enviament</small>
+        <?php the_sub_field('boto_paypal'); ?>
+            </li>
+                                        
+            <?php endwhile; ?>
+            </ul>
+
+            <?
+        endwhile;
+
+    else :
+    // no rows found
+    endif;
+
+    ?>
+    </section>
 
 
 

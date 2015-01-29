@@ -9,6 +9,7 @@ body {
 	color: $textcolor;
 	@include background-image(bg,cover,svg);
 	background-color: $background;
+	font-size: 1.5rem;
 }
 
 
