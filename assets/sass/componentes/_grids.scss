@@ -15,7 +15,7 @@
   .grid-content__item {
     list-style: none;
     margin-bottom: $gutterwidth;
-    @include max-width(600px);
+    // @include max-width(600px);
 
     @media all and (min-width: $bp3) {
       img {}

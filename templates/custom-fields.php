@@ -7,14 +7,16 @@
 <!-- Bloques -->
 <?php if( have_rows('layout_content') ): ?>
     <?php while ( have_rows('layout_content') ) : the_row();?>
+    
+    <section class="section-wrap">
+
+    <!-- Page Header -->
+    <?php get_template_part('templates/page', 'header'); ?>
 
     <div class="grid-content">
 
-
-
     <?php if( get_row_layout() == 'contact_form' ):?>
 
-    
         <?php
             if ( function_exists( 'wpcf7_enqueue_scripts' ) ) { wpcf7_enqueue_scripts(); }
             if ( function_exists( 'wpcf7_enqueue_styles' ) ) { wpcf7_enqueue_styles(); }
@@ -74,6 +76,7 @@
         <?php endif;?>
     
     </div>
+    </section>
     <?php endwhile;?>
 
 <?php else :?>
@@ -96,7 +99,7 @@
 
 
 
-    <?php if(get_row_layout() == "quote"): // Frases?>
+    <?php if(get_row_layout() == "quote"): // Frases ?>
 
     <blockquote cite="<?php the_sub_field("autor"); ?>">
         <q>"<?php the_sub_field("quote"); ?>" </q><span><?php the_sub_field("autor"); ?></span>
@@ -143,7 +146,7 @@
 
     <?php elseif(get_row_layout() == "gallery"): // Layout Gallery ?>
 
-    <section>
+    <section class="section-wrap">
     
         <div class="galeria-fotos">
 
@@ -181,7 +184,7 @@
 
     <?php elseif(get_row_layout() == "video"): // Layout Videos ?>
 
-    <section class="video-main">
+    <section class="video-main section-wrap">
         
         <h2 class="video-main__header">Video</h2>
         
@@ -315,9 +318,10 @@
 
     <?php elseif(get_row_layout() == "tienda"): // tienda ?>
     
-    <section class="tienda">
+    <section class="tienda section-wrap">
 
-    <h2>tienda</h2>
+    <!-- Page Header -->
+    <?php get_template_part('templates/page', 'header'); ?>
 
     <?php
     // check if the repeater field has rows of data
@@ -361,87 +365,88 @@
 
     <?php elseif(get_row_layout() == "links_gallery"): // Galeria de enlaces ?>
 
-    <section class="galeria-links">
+    <section class="galeria-links section-wrap">
 
-    <h2>Links</h2>
+        <!-- Page Header -->
+        <?php get_template_part('templates/page', 'header'); ?>
 
-    <?php
-    // check if the repeater field has rows of data
-    if( have_rows('lista') ):
+        <div class="grid">
 
-        // loop through the rows of data
-        while ( have_rows('lista') ) : the_row();
-            ?>
-            
-            <div class="grid">
-            
+        <?php
+        // check if the repeater field has rows of data
+        if( have_rows('lista') ):
+
+            // loop through the rows of data
+            while ( have_rows('lista') ) : the_row();
+                ?>
+                
                 <div class="galeria-links__item">
 
-                <?php the_sub_field('title'); ?>
+                    <?php the_sub_field('title'); ?>
 
-                <?php 
-                $image = get_sub_field('img');
-                $url = get_sub_field('url');
-                echo '<a href="'.$url.'" target="_new"><img src="'.$image['sizes']['thumbnail'].'" /></a>';
-                ?>
+                    <?php 
+                    $image = get_sub_field('img');
+                    $url = get_sub_field('url');
+                    echo '<a href="'.$url.'" target="_new"><img src="'.$image['sizes']['thumbnail'].'" /></a>';
+                    ?>
 
-                <p><?php the_sub_field('description'); ?></p>
-          
+                    <p><?php the_sub_field('description'); ?></p>
+              
                 </div>
 
-            </div>
+                <?
+            endwhile;
+            else :
+            // no rows found
+            endif;
+            ?>
+        </div>
 
-            <?
-        endwhile;
-
-    else :
-    // no rows found
-    endif;
-
-    ?>
     </section>
 
 
 
     <?php elseif(get_row_layout() == "content_summary"): // Sumario de contenido ?>
                 
-    <section class="content-summary">
+    <section class="content-summary section-wrap">
+    
+        <div class="grid">
 
-    <?php
-    // check if the repeater field has rows of data
-    if( have_rows('lista') ):
-
+        <?php
+        // check if the repeater field has rows of data
+        if( have_rows('lista') ):
         // loop through the rows of data
         while ( have_rows('lista') ) : the_row();
-            ?>
-                        
+        ?>
+                            
             <?php while(has_sub_field('apartado')): ?>  
-            
-                <div class="content-summary__item">
+                
+            <div class="content-summary__item">
 
-                    <?php
-                        $image = get_sub_field('img');
-                        echo '<img src="'.$image['sizes']['medium'].'" />';
-                    ?>
+                <?php
+                $image = get_sub_field('img');
+                echo '<img src="'.$image['sizes']['medium'].'" />';
+                ?>
 
-                    <h3><?php the_sub_field('title'); ?></h3>
+                <h3><?php the_sub_field('title'); ?></h3>
 
-                    <p><?php the_sub_field('text'); ?></p>
+                <p><?php the_sub_field('text'); ?></p>
 
-                    <a class="btn" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
-            
-                </div>
-                                        
+                <a class="btn" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
+                
+            </div>
+                                            
             <?php endwhile; ?>
 
-            <?
+        <?
         endwhile;
+        else :
+        // no rows found
+        endif;
+        ?>
 
-    else :
-    // no rows found
-    endif;
+        </div>
 
-    ?>
     </section>
 
 

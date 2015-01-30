@@ -4,11 +4,13 @@
 	display: table;
 	@include max-width($bp3);
 }
-
+	.article-post__content {
+		display: table-cell;
+		vertical-align: top;
+	}
 	.article-post__figure {
 		width: 50%;
 		display: table-cell;
-		background-color: yellow;
 	}
 		.article-post__figure + p {
 			background-color: red;

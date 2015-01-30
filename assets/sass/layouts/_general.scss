@@ -16,12 +16,7 @@ body {
 img {
   @include max-width(100%);
   height: auto;
-  @media all and (min-width: $bp3) {
-  	filter: grayscale(1); //para navegadores molones
-	&:hover {
-	  filter: grayscale(0); //para navegadores molones
-	}
-  }
+  @media all and (min-width: $bp3) {}
 }
 	// Fondos
 	.img--bg {
@@ -44,6 +39,11 @@ img {
 
 
 // LAYOUT
+.section-wrap {
+	@include max-width($bp1);
+    background-color: $white;
+    @extend %padding-vertical;
+}
 .wrapper {
   @include grid(2, 8, 2);
 }
