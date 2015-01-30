@@ -92,17 +92,36 @@ input[type="submit"].btn:hover {
 * Botones
 */
 .btn--slider {
-	color 				: $color-alt;
+
+	border: 1px solid $white;
+	// background-color: $color-base;
+
+	a, &:visited {
+		color: $white;
+	}
+
+	&:hover {
+		color: $color-base;
+		background-color: $white;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+
+}
+
+.btn--slider__nav {
+	color 				: $white;
 	border  			: none;
-	// @include font-size(36);
+	@include font-size(36);
 	border-radius: 100%;
 	// background-color: $color-base;
 	padding-left: 0;
 	padding-right: 0;
 
 	&:hover {
-		color: $color-base;
-		background-color 	: $black-alpha-suave;
+		background-color: $black-alpha-suave;
 	}
 	
 	&:focus {

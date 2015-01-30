@@ -36,12 +36,12 @@ $link-horizontal-padding:20px;
 /*------------------------------------*\
     $FONT-FACE
 \*------------------------------------*/
-// $basefont 					: "Lato", sans-serif;
-// $basefont 					: Helvetica, Arial, sans-serif;
+// $basefont 				: "Lato", sans-serif;
+// $basefont 				: Helvetica, Arial, sans-serif;
 $googlefont 				: "http://fonts.googleapis.com/css?family=Almendra:400,400italic";
 $altfont 					: 'Almendra', serif;
 $codefont 					: "Courier New", monospace;
-$basefont				: $altfont;
+$basefont					: $altfont;
 $baseheadingfont 			: $basefont;
 $baseheadingfontweight 		: 400;
 
@@ -88,25 +88,27 @@ $color-base-darken	: darken($color-base, 20%);
  */
 
 $black 				: rgb(0,0,0);
-$black-alpha: transparentize($black, .3);
+$black-alpha		: transparentize($black, .3);
 $black-alpha-suave 	: transparentize($black, .1);
 $black-alpha-medio	: transparentize($black, .5);
 $black-alpha-fuerte	: transparentize($black, .8);
 
 $white				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.3);
-$white-alpha-suave 		: rgba(255,255,255,0.1);
-$white-alpha-medio		: rgba(255,255,255,0.5);
-$white-alpha-fuerte		: rgba(255,255,255,0.8);
+$white-alpha-suave 	: rgba(255,255,255,0.1);
+$white-alpha-medio	: rgba(255,255,255,0.5);
+$white-alpha-fuerte	: rgba(255,255,255,0.8);
 
 /**
  * Escala de grises
  */
 $lightgrey			: lighten($black, 30%);
 $grey				: lighten($black, 50%);
+
 // Bordes
 $bordercolor    	: $white;
 $bordercolorhover   : $color-base;
+
 // Web
 $baseheadingfontcolor 		: $black;
 $background			: 	lighten($color-base, 57%);

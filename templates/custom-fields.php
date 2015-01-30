@@ -204,6 +204,9 @@
 
     <?php while(has_sub_field('video_repeater')): ?>  
 
+        <?php if (get_sub_field("btn")): ?>
+            <a class="btn btn--invert" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
+        <?php endif ?>
         
         <?php if (get_sub_field("video")): ?>
             <div class="video-main__iframe"><?php the_sub_field("video"); ?></div>
@@ -212,11 +215,6 @@
         <?php if (get_sub_field("descripcion")): ?>
             <p class="video-main__description"><?php the_sub_field("descripcion"); ?></p>
         <?php endif ?>
-
-        <?php if (get_sub_field("btn")): ?>
-            <a class="btn btn--invert" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
-        <?php endif ?>
-
     
     <?php endwhile; ?>
     <?php endif; ?> 
@@ -252,12 +250,12 @@
                     <?php the_post_thumbnail('medium'); ?>
                 </figure>
 
-                <div class="article-post--slider__content">
+                <div class="article-post__content">
 
                     <p class="article-post--slider__meta-date"><?php the_date('l, j F Y'); ?></p>
                     <h2><?php the_title(); ?></h2>
                     <p><?php the_excerpt(); ?></p>
-                    <a class="btn" href="<?php the_permalink(); ?>">Noticia completa &rarr;</a>
+                    <a class="btn btn--slider" href="<?php the_permalink(); ?>">Noticia completa &rarr;</a>
 
                 </div>
 
@@ -282,8 +280,8 @@
     </ul>
     
     <!-- Prev/next controls -->
-    <button class="slider__item__prev btn btn--slider">&larr;</button>
-    <button class="slider__item__next btn btn--slider">&rarr;</button>
+    <button class="slider__item__prev btn btn--slider__nav">&larr;</button>
+    <button class="slider__item__next btn btn--slider__nav">&rarr;</button>
   
 </section>
 

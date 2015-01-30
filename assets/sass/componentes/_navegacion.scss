@@ -122,20 +122,21 @@ Main navbar
   
   .current-menu-item {
     a {
-      border-radius: $radius;
+      border-radius: $radius * 4;
+      // border: dashed 3px $color-alt;
+      padding: 5px 12px;
       background-color: $color-base;
-      padding: 5px 10px; 
     }    
   }
 
   .nav-header__item, li {
     display: table-cell;
-    width: 8%;
+    width: 12%;
     @extend %text-center; 
     vertical-align: middle;
     @extend %lowercase;
     font-size: 1.2rem;
-    font-weight: $baseheadingfontweight;
+    // font-weight: $baseheadingfontweight;
 
     a, a:visited {
       color: $white;

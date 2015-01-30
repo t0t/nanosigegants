@@ -27,7 +27,7 @@
 		width: 60%;
 		display: table-cell;
 	}
-		.article-post--slider__figure + .article-post--slider__content {
+		.article-post--slider__figure + .article-post__content {
 			width: 40%;
 			display: table-cell;
 			vertical-align: top;
@@ -40,6 +40,7 @@
 			h2 {
 				@extend %text-left;
 				margin-bottom: $gutterwidth;
+				color: $white;
 			}
 
 			h2 + p {

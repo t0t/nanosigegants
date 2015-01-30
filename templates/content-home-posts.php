@@ -26,14 +26,13 @@
             <figure class="article-post__figure ">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                 <?php the_post_thumbnail('medium'); ?>
-                <figcaption><?php the_date(); ?></figcaption></a>
+                </a>
             </figure>
 
             <div class="article-post__content">
 
                     <p class="article-post--slider__meta-date"><?php the_date('l, j F Y'); ?></p>
-                    <h3><?php the_title(); ?></h3>
-                    <p><?php the_excerpt(); ?></p>
+                    <h2><?php the_title(); ?></h2>
                     <a class="btn" href="<?php the_permalink(); ?>">&rarr;</a>
 
             </div>
