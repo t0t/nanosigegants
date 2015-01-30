@@ -181,13 +181,14 @@
 
     <?php elseif(get_row_layout() == "video"): // Layout Videos ?>
 
+    <section class="video-main">
+        
+        <h2 class="video-main__header">Video</h2>
+        
     <?php if(get_sub_field('video_repeater')): ?>
 
     <?php while(has_sub_field('video_repeater')): ?>  
 
-    <section class="video-main">
-        
-        <h2 class="video-main__header">Video</h2>
         
         <?php if (get_sub_field("video")): ?>
             <div class="video-main__iframe"><?php the_sub_field("video"); ?></div>
@@ -201,10 +202,10 @@
             <a class="btn btn--invert" href="<?php the_sub_field('btn'); ?>"><?php the_sub_field('btn-title'); ?> &rarr;</a>
         <?php endif ?>
 
-    </section>
     
     <?php endwhile; ?>
     <?php endif; ?> 
+    </section>
 
 
 
@@ -311,11 +312,9 @@
     </section>
 
 
+
     <?php elseif(get_row_layout() == "tienda"): // tienda ?>
     
-
-
-
     <section class="tienda">
 
     <h2>tienda</h2>
@@ -358,6 +357,50 @@
 
     ?>
     </section>
+
+
+    <?php elseif(get_row_layout() == "links_gallery"): // Galeria de enlaces ?>
+
+    <section class="galeria-links">
+
+    <h2>Links</h2>
+
+    <?php
+    // check if the repeater field has rows of data
+    if( have_rows('lista') ):
+
+        // loop through the rows of data
+        while ( have_rows('lista') ) : the_row();
+            ?>
+            
+            <div class="grid">
+            
+                <div class="galeria-links__item">
+
+                <?php the_sub_field('title'); ?>
+
+                <?php 
+                $image = get_sub_field('img');
+                $url = get_sub_field('url');
+                echo '<a href="'.$url.'" target="_new"><img src="'.$image['sizes']['thumbnail'].'" /></a>';
+                ?>
+
+                <p><?php the_sub_field('description'); ?></p>
+          
+                </div>
+
+            </div>
+
+            <?
+        endwhile;
+
+    else :
+    // no rows found
+    endif;
+
+    ?>
+    </section>
+
 
 
     <?php elseif(get_row_layout() == "content_summary"): // Sumario de contenido ?>
