@@ -59,7 +59,7 @@ ol,
 ul,
 dl,
 address {
-	margin-bottom : $baselineheight;
+	margin-bottom : $baselineheight - 0.5;
 	line-height : $baselineheight;
 	letter-spacing: $baseletterspacing;
 	word-spacing: $altlineheight/10;

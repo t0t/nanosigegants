@@ -6,54 +6,64 @@
 
 <!-- Bloques -->
 <?php if( have_rows('layout_content') ): ?>
-    <?php while ( have_rows('layout_content') ) : the_row();?>
-    
+
     <section class="section-wrap">
 
     <!-- Page Header -->
     <?php get_template_part('templates/page', 'header'); ?>
 
-    <div class="grid-content">
+    <?php while ( have_rows('layout_content') ) : the_row();?>
+    
+
 
     <?php if( get_row_layout() == 'contact_form' ):?>
+
+        <div class="grid">
 
         <?php
             if ( function_exists( 'wpcf7_enqueue_scripts' ) ) { wpcf7_enqueue_scripts(); }
             if ( function_exists( 'wpcf7_enqueue_styles' ) ) { wpcf7_enqueue_styles(); }
         ?>
 
-        <div class="grid-content__item">
-            <img src="<?php the_sub_field("image"); ?>" alt="">
-            <p><?php the_sub_field("address"); ?></p>
-        </div>
-        <div class="grid-content__item">
-            <?php echo do_shortcode('[contact-form-7 id="313" title="Formulari de contacte"]'); ?>
+            <div class="grid-content__item">
+                <img src="<?php the_sub_field("image"); ?>" alt="">
+                <p><?php the_sub_field("address"); ?></p>
+            </div>
+            <div class="grid-content__item">
+                <?php echo do_shortcode('[contact-form-7 id="313" title="Formulari de contacte"]'); ?>
+            </div>
+
         </div>
 
 
 
         <?php elseif( get_row_layout() == '2_blocks' ):?>
 
-                <!-- repeater -->
-                <?php if( have_rows('block')): ?>
-                <?php while (have_rows('block')) : the_row(); ?>
+        <div class="grid">
+
+            <!-- repeater -->
+            <?php if( have_rows('block')): ?>
+            <?php while (have_rows('block')) : the_row(); ?>
             
-                <div class="grid-content__item">
+                <div class="grid__item">
                 
-                <?php the_sub_field("header"); ?>
-                <?php the_sub_field("content"); ?>
-                <img src="<?php the_sub_field('image'); ?>" alt="">
+                    <?php if (get_sub_field("header")): ?>
+                    <p><?php the_sub_field("header"); ?></p>
+                    <?php endif ?>
+
+                    <?php the_sub_field("content"); ?>
+                    <img src="<?php the_sub_field('image'); ?>" alt="">
             
                 </div>
 
-                <?php endwhile;?>
-                <?php endif ?>
+            <?php endwhile;?>
+            <?php endif ?>
 
 
 
         <?php elseif( get_row_layout() == '1_block' ):?>
 
-                <div class="grid-content_wrap">
+            <div class="grid-content_wrap">
 
                 <!-- repeater -->
                 <?php if( have_rows('block')): ?>
@@ -67,17 +77,19 @@
             
                 </div>
 
-                <?php endwhile;?>
-                <?php endif ?>
-                </div>
+            <?php endwhile;?>
+            <?php endif ?>
 
+            </div>
+            
+        </div>
             
 
         <?php endif;?>
     
-    </div>
-    </section>
+    
     <?php endwhile;?>
+    </section>
 
 <?php else :?>
 <?php endif;?>

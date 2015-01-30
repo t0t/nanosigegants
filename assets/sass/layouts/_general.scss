@@ -1,7 +1,7 @@
 html {
   font-size: 75%; //de 16px
   @media all and (min-width: $bp3) {
-    font-size: 100%; //de 16px
+    font-size: 85%; //de 16px
   }
 }
 body {
@@ -42,8 +42,16 @@ img {
 .section-wrap {
 	@include max-width($bp1);
     background-color: $white;
-    @extend %padding-vertical;
+    @media all and (min-width: $bp3) {
+    	padding: $gutterwidth;
+    }
+
+	p:first-child {
+		@include font-size(40);
+		font-style: italic;
+	}
 }
+
 .wrapper {
   @include grid(2, 8, 2);
 }

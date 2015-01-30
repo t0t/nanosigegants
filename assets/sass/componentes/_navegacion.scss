@@ -104,13 +104,14 @@ Main navbar
 
 // Nav Header
 .nav-header {
+
   @extend %display-table;
   margin: 0 auto;
   @extend %full-width;
   max-width: $bp1;
   background-color: $black;
   border-radius: $radius;
-
+  
   @media all and (min-width: $bp3) {
     min-height: 57px;
   }
@@ -119,6 +120,14 @@ Main navbar
     display: none;
   }
   
+  .current-menu-item {
+    a {
+      border-radius: $radius;
+      background-color: $color-base;
+      padding: 5px 10px; 
+    }    
+  }
+
   .nav-header__item, li {
     display: table-cell;
     width: 8%;
