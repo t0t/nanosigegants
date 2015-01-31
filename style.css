@@ -1001,6 +1001,7 @@ input:required:focus:valid { background-color: #4dff4d; border: 1px solid green;
 @media all and (min-width: 700px) { .brand { -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; -moz-align-items: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; } }
 
 .brand__logo { width: 60px; height: 60px; }
+@media screen and (min-width: 780px) { .brand__logo { width: 120px; height: 120px; } }
 
 .brand__name { line-height: 1; margin-bottom: 0; font-size: 1.1em; font-style: italic; letter-spacing: 1px; color: #326171; }
 @media all and (max-width: 700px) { .brand__name { width: 140px; } }
