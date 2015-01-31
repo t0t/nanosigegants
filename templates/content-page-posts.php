@@ -21,7 +21,7 @@
     <!-- Custom Loop -->
     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
         
-            <div class="grid__item article-post">
+            <div class="article-post">
 
             <? if ( has_post_thumbnail() ) { ?>
 
@@ -41,24 +41,16 @@
 
             <?}else {?>  
 
-            <figure>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" class="">
-                <figcaption><?php the_title(); ?></figcaption></a>
-            </figure>
+            <figure><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" class=""><figcaption><?php the_title(); ?></figcaption></a></figure>
 
             <?}?>
-
-            <footer>
-            <?php the_tags('<ul class="list--inline"><li>','</li>,<li>', '</li></ul>'); ?>
-            </footer>
 
             </div>
             
         <?php endwhile; ?>
         
-        </section>
-        <!-- /grid -->
+    </section>
+    <!-- /grid -->
 
 
     <!-- Navegacion -->

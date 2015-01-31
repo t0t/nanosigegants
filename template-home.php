@@ -26,14 +26,8 @@ Template Name: Portada
 </main>
 
 
-<!-- Sidebar -->
-    <?php if ( is_page() ) : ?>
-        <?php get_sidebar(); ?>
-    <?php elseif ( is_404() ) : ?>
-        <?php //get_sidebar( '404' ); ?>
-    <?php else : ?>
-        <?php //get_sidebar( 'userpicture' ); ?>
-    <?php endif; ?>
+<!-- Sidebars -->
+<?php get_sidebar(); ?>
 
 
 <?php get_footer(); ?>

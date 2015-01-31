@@ -30,13 +30,3 @@
     <?php next_post_link(); ?>
 
 </div>
-
-
-    <!-- Sidebar -->
-    <?php if ( is_page() ) : ?>
-        <?php get_sidebar('page'); ?>
-    <?php elseif ( is_404() ) : ?>
-        <?php //get_sidebar( '404' ); ?>
-    <?php else : ?>
-        <?php //get_sidebar( 'userpicture' ); ?>
-    <?php endif; ?>

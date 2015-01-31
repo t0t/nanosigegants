@@ -2,9 +2,57 @@
     $WIDGETS
 \*------------------------------------*/
 
-//Sidebar
-.sidebar {}
-.sidebar__widgets {}
+// Sidebar
+.sidebar {
+	@include max-width($bp1);
+}
+
+// Widgets
+.widget {
+	
+}
+.widget--newsletter {
+	
+	@extend %basepadding;
+	@extend %text-center;
+	background-color: $black;
+
+	form {
+		@include flexbox;
+		// @include justify-content(center);
+		// @include align-content(center);
+		@include align-items(center);
+		margin: 0;
+		padding: 0;
+	}
+
+	p, label {
+		color: $white;
+		margin-right: 10px;
+	}
+	
+	input[type="email"] {
+		color: $color-base;
+		min-width: 35%;
+		max-width: 40%;
+		&::-webkit-input-placeholder {
+        	font-size: inherit;
+        	color: $grey;
+    	}
+	}
+
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		display: table-cell;
+		background-color: $color-alt;
+		color: $white;
+		min-width: 15%;
+		max-width: 20%;
+	}
+
+}
+
 
 
 

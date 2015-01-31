@@ -65,13 +65,3 @@
     </nav>
 
 </div>
-
-
-    <!-- Sidebar -->
-    <?php if ( is_single() ) : ?>
-        <?php get_sidebar('single'); ?>
-    <?php elseif ( is_404() ) : ?>
-        <?php //get_sidebar( '404' ); ?>
-    <?php else : ?>
-        <?php //get_sidebar( 'userpicture' ); ?>
-    <?php endif; ?>

@@ -1,26 +1,39 @@
+
+
+
 <aside class="sidebar">
 
-<h3>Sidebar Single</h3>
+    <?php if ( is_single() ) : ?>
 
-<?php $args = array(
-	'depth'       => 0,
-	'sort_column' => 'menu_order, post_title',
-	'menu_class'  => 'menu',
-	'include'     => '212,18,16,286',
-	'exclude'     => '',
-	'echo'        => true,
-	'show_home'   => false,
-	'link_before' => '',
-	'link_after'  => '' );
-?>
-<?php wp_page_menu( $args ); ?> 
+        <?php get_sidebar('single'); ?>
+        
+    <?php elseif ( is_page() ) : ?>
+        
+        <?php get_sidebar('page'); ?>
 
-	<?php if ( is_active_sidebar( 'sidebar-custom' ) ) : ?>
-		<!-- #start primary-sidebar -->
-	    <div class="sidebar__widgets">
-			<?php dynamic_sidebar( 'sidebar-custom' ); ?>
-		</div>
-		<!-- #end primary-sidebar -->
-	<?php endif; ?>
-	
+    <?php //elseif ( is_page_template() ) : ?>
+        
+        <?php //get_sidebar('page-template.php'); ?>
+
+    <?php else : ?>
+    <p>ups, no sidebar!</p>   
+    <?php endif; ?>
+
+    <footer class="widget widget--newsletter">
+
+			<form action="//nanosigegants.us10.list-manage.com/subscribe/post?u=f12298f0773d67aadf06c2fc4&amp;id=a1594d1567" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+				<p>Subscribe to our mailing list</p>
+
+				<label for="mce-EMAIL"></label>
+				<input type="email" value="" name="EMAIL" placeholder="Tu email aquí" id="mce-EMAIL">
+				
+				<div id="mce-responses"><div id="mce-error-response" style="display:none"></div><div id="mce-success-response" style="display:none"></div></div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+			    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+
+			</form>
+
+    </footer>
+
 </aside>

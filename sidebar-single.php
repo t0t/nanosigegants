@@ -1,6 +1,10 @@
-<aside class="sidebar">
 
 <h3>Sidebar Single</h3>
+
+
+Sidebar singleeeeeee
+
+
 
 	<?php if ( is_active_sidebar( 'sidebar-custom' ) ) : ?>
 
@@ -13,5 +17,3 @@
 		<!-- #end primary-sidebar -->
 
 	<?php endif; ?>
-	
-</aside>

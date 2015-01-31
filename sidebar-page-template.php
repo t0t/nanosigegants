@@ -1,6 +1,5 @@
 
-
-<h3>sidebar page</h3>
+<h3>sidebar page template</h3>
 
 <?php $args = array(
 	'depth'       => 0,
@@ -13,7 +12,9 @@
 	'link_before' => '',
 	'link_after'  => '' );
 ?>
-<?php wp_page_menu( $args ); ?>
+<?php wp_page_menu( $args ); ?> 
+
+
 
 
 
@@ -26,4 +27,5 @@
 
 		</div>
 		<!-- #end primary-sidebar -->
+
 	<?php endif; ?>
