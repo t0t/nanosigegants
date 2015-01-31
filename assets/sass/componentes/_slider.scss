@@ -30,7 +30,7 @@
     padding-bottom: 5px;
 	
 	@media all and (min-width: 780px) {
-		width: 90%;
+		// width: 90%;
 		background-color: pink;
 	}
 
@@ -39,7 +39,14 @@
     }
   }
 
-
+.slider__slides {
+	@media all and (min-width: 780px) {
+		@include flexbox;
+		@include align-content(center); //alineado horizontal
+		@include align-items(center); //alineado vertical
+		width: 90%;
+	}
+}
 
 .slider__figure {
 	position: relative;
@@ -47,9 +54,8 @@
 	
 	@media all and (min-width: 780px) {
 		@include flexbox;
-		@include justify-content(center); //alineado horizontal
+		@include align-content(center); //alineado horizontal
 		@include align-items(center); //alineado vertical
-		background-color: red;
 		width: 100%;
 	}
 
@@ -62,7 +68,6 @@
 		@media all and (min-width: 780px) {
 			width: 70%;
 			border-radius: $radius;
-			background-color: black;
 		}
 	}
 	
@@ -84,7 +89,6 @@
 
 		@media all and (min-width: 780px) {
 			width: 30%;
-			background-color: yellow;
 		}
 
 		&:hover {

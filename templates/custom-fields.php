@@ -236,6 +236,7 @@
     <?php the_sub_field("title"); ?>
     <?php the_sub_field("description"); ?>
 
+    <div class="slider__slides">
 
     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
       
@@ -270,6 +271,7 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
         
+    </div>
     
     <!-- Prev/next controls -->
     <button class="slider__item__prev btn btn--slider__nav">&larr;</button>
