@@ -11,7 +11,7 @@ Template Name: Blog
 	<?php //get_template_part('templates/content', 'page'); ?>
 	
 	<!-- Loop for posts -->
-	<?php get_template_part('templates/content', 'home-posts'); ?>
+	<?php get_template_part('templates/content', 'page-posts'); ?>
 
 
 </main>

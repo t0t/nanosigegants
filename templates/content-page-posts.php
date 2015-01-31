@@ -1,9 +1,13 @@
-<div class="main__content">
-    
-    <section class="section-wrap">
+
+<div class="section-wrap">
 
     <!-- Page Header -->
     <?php get_template_part('templates/page', 'header'); ?>
+
+
+
+
+    <section class="grid">
 
     <?php 
     $this_post = $post->ID;
@@ -13,11 +17,9 @@
     'post__not_in' => array($this_post),
     'category_name' => 'noticies') ); 
     ?>
-xxx
-        <!-- post -->
-        <article class="grid">
 
-        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+    <!-- Custom Loop -->
+    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
         
             <div class="grid__item article-post">
 
@@ -55,30 +57,24 @@ xxx
             
         <?php endwhile; ?>
         
+        </section>
+        <!-- /grid -->
 
-        
+
+    <!-- Navegacion -->
+    <h3>Navegació adicional</h3>
+
     <?php previous_post_link(); ?>
-
-
-
-    <?php if(is_single()) { // single-view navigation ?>
-
-    <?php $posts = query_posts($query_string); if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-    <?php previous_post_link(); ?> | <?php next_post_link(); ?>
-
-    <?php endwhile; endif; ?>
-
-    <?php } else { // archive view navigation ?>
-
-        <?php posts_nav_link(); ?>
-
-    <?php } ?>
-
-
-
-        </article>
-
-    </section>
+    <?php next_post_link(); ?>
 
 </div>
+
+
+    <!-- Sidebar -->
+    <?php if ( is_page_template() ) : ?>
+        <?php get_sidebar('page-posts'); ?>
+    <?php elseif ( is_404() ) : ?>
+        <?php //get_sidebar( '404' ); ?>
+    <?php else : ?>
+        <?php //get_sidebar( 'userpicture' ); ?>
+    <?php endif; ?>
