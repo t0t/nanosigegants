@@ -159,7 +159,7 @@ td, th { padding: 0; }
 \*------------------------------------*/
 .article-post__content h2 + p { line-height: 1; }
 
-.btn, .nav-header .nav-header__item, .nav-header li, .content-summary h3 { text-transform: lowercase; }
+.btn, .nav-main__overlay li, .nav-header .nav-header__item, .nav-header li, .content-summary h3 { text-transform: lowercase; }
 
 .galeria-fotos { padding: 3% 7%; }
 
@@ -780,17 +780,18 @@ sub { bottom: -2.25em; }
 /*********************
 Main navbar
 **********************/
-.nav-main a { padding: 3%; color: white; text-transform: uppercase; display: block; }
-.nav-main a:hover { background-color: pink; }
-.nav-main label::after { position: fixed; top: 3%; right: 3%; width: 1.5em; height: 1.5em; display: block; font-size: 3rem; content: "☰"; z-index: 25; line-height: 1.6; text-align: center; border-radius: 100%; }
+.nav-main label::after { position: fixed; top: 27px; right: 25px; width: 2em; height: 2em; display: block; font-size: 2rem; content: "☰"; z-index: 25; line-height: 2.1; text-align: center; background-color: #326171; border-radius: 100%; color: white; }
 @media all and (min-width: 780px) { .nav-main label::after { display: none; } }
 @media (min-width: 600px) { .nav-main label:hover:after { color: white; } }
-.nav-main > ul { position: fixed; top: 0; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; height: 100vh; width: 100%; margin: 0; padding: 0; background-color: #326171; text-align: center; display: none; }
-.nav-main > ul > li { border-bottom: dashed 2px #8c4c35; }
-.nav-main > ul > li:last-child { border-bottom: none; }
+.nav-main > ul { position: fixed; top: 0; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; height: 100vh; width: 100%; margin: 0; padding: 0; background-color: rgba(0, 0, 0, 0.7); text-align: center; display: none; }
 .nav-main input[type="checkbox"]:checked ~ ul { z-index: 4; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 .nav-main input[type="checkbox"] { display: none; }
 .nav-main input[type="checkbox"]:checked + label::after { content: "X"; }
+
+.nav-main__overlay li ul { display: none; }
+.nav-main__overlay .current-menu-item a { display: none; }
+.nav-main__overlay a { line-height: 1.3; color: white; display: block; font-size: 3.5rem; }
+.nav-main__overlay a:hover { background-color: black; }
 
 .nav-footer { display: table; }
 

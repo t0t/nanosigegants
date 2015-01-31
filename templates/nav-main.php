@@ -8,7 +8,7 @@
 			'theme_location'  => 'fixed_menu',
 			'container'       => '',
 			'container_class' => '',
-			'menu_class'      => 'nav-header'
+			'menu_class'      => 'nav-main__overlay'
 		);
 
 		wp_nav_menu( $defaults );
