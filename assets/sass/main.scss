@@ -13,10 +13,11 @@ License URI:        http://opensource.org/licenses/MIT
 @import "lib/variables";
 @import "lib/placeholders";
 
+
+@import "lib/mixins/flex";
 @import "lib/mixins/prefijos";
 @import "lib/mixins/images";
 @import "lib/mixins/breakpoints";
-@import "lib/mixins/tipografia";
 @import "lib/mixins/transformaciones";
 @import "lib/mixins/espaciados";
 @import "lib/mixins/grid";
@@ -24,7 +25,8 @@ License URI:        http://opensource.org/licenses/MIT
 @import "lib/mixins/formularios";
 @import "lib/mixins/scroll";
 @import "lib/mixins/shapes";
-@import "lib/mixins/flex";
+@import "componentes/slider";
+@import "lib/mixins/tipografia";
 @import "componentes/reset";
 
 @import "layouts/header";
@@ -52,8 +54,6 @@ License URI:        http://opensource.org/licenses/MIT
 @import "componentes/shapes";
 @import "componentes/animaciones";
 
-// Sliders
-@import "componentes/carousel";
 
 // Styleguide
 //@import "styleguide";

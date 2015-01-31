@@ -171,13 +171,17 @@
 }
 
 	.content-summary__item {
-		
-		width: 33%;
+
 		@extend %text-center;
+		padding: $gutterwidth;
 
 		p {
 			margin-bottom: $gutterwidth;
 			// @extend %line-height-smaller;
+		}
+
+		@media all and (min-width: 850px) {
+			width: 33%;
 		}
 	}
 

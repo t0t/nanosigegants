@@ -26,17 +26,23 @@ Main navbar
     width: 1.5em;
     height: 1.5em;
     display: block;
+    font-size: 3rem;
     content: "☰";
     z-index: 25;
     line-height: 1.6;
     text-align: center;
-    background-color: $color-alt;
+    // background-color: $color-alt;
     border-radius: 100%;
+
+    @media all and (min-width: 780px) {
+      display: none;
+    }
   }
+
   @media (min-width:$bp3) {
     label {
       &:hover:after {
-          background-color: $color-alt;
+          color: $white;
       }
     }
   }
@@ -52,7 +58,7 @@ Main navbar
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: $black-alpha;
+    background-color: $color-alt;
     text-align: center;
     display: none;
 
@@ -105,15 +111,16 @@ Main navbar
 // Nav Header
 .nav-header {
 
-  @extend %display-table;
-  margin: 0 auto;
   @extend %full-width;
+  min-height: 57px;
+  margin: 0 auto;
   max-width: $bp1;
   background-color: $black;
   border-radius: $radius;
+  display: none;
   
-  @media all and (min-width: $bp3) {
-    min-height: 57px;
+  @media all and (min-width: 780px) {
+    display: table;
   }
   
   li ul {

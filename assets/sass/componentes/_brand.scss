@@ -1,45 +1,20 @@
 .brand {
-	display: flex;
-	flex-direction: column;
-	justify-content: center; //alineado horizontal
-	align-items: center; //alineado vertical
+	@include flexbox;
+	@include justify-content(center); //alineado horizontal
+	@include align-items(center); //alineado vertical
 	padding: $gutterwidth/2;
-	// background-color: $color-base-light;
 	
-	@media all and (min-width:$bp3) {
-		// flex-direction: row;
-		max-height: 200px;
+	@media all and (min-width:700px) {
+		flex-direction: column;
+		// max-height: 200px;
 	}
 
 
 	a {
-		margin-right: $gutterwidth/4;
 		svg {
 			&.brand__logo {
-				//@include background-image(logo,contain,svg);
-				//background-repeat: no-repeat;
-				//background-position: center;
 				width: 60px;
 				height: 60px;
-
-				path {
-					fill: none;
-					stroke: $black;
-					stroke-width: 1;
-					stroke-dashoffset: 500; 
-					stroke-dasharray: 500;
-					
-					&:hover {
-						fill: $color-alt;
-						fill-opacity: 1;
-						fill-rule: inherit;
-						// stroke-width: 2;
-						// stroke-linejoin: round;
-						// stroke-linecap: round;
-						stroke-dashoffset: 10; 
-						stroke-dasharray: 10;
-					}
-				}
 			}
 		}
 	}
@@ -54,9 +29,11 @@
 		font-size: 1.1em;
 		font-style: italic;
 		color: $color-alt;
+		@media all and (max-width: 704px) {
+			width: 110px;
+		}
 	}
 
 	.brand__description {
-		display: block;
 		display: none;
 	}

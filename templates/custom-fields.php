@@ -236,30 +236,23 @@
     <?php the_sub_field("title"); ?>
     <?php the_sub_field("description"); ?>
 
-    <ul>
 
     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
       
-        <li class="slider__item">
+        <article class="slider__item">
 
         <? if ( has_post_thumbnail() ) { ?>
 
-            <article class="article-post--slider">
-
-                <figure class="slider__figure article-post--slider__figure">
+                <figure class="slider__figure">
                     <?php the_post_thumbnail('medium'); ?>
-                </figure>
+                    <figcaption class="slider__caption">
 
-                <div class="article-post__content">
-
-                    <p class="article-post--slider__meta-date"><?php the_date('l, j F Y'); ?></p>
-                    <h2><?php the_title(); ?></h2>
-                    <p><?php the_excerpt(); ?></p>
+                    <small class="slider__meta-date"><?php the_date('j F Y'); ?></small>
+                    <span class="slider__title"><?php the_title(); ?></span>
+                    <span><?php the_excerpt(); ?></span>
                     <a class="btn btn--slider" href="<?php the_permalink(); ?>">Noticia completa &rarr;</a>
-
-                </div>
-
-            </article>
+                    </figcaption>
+                </figure>
 
         <?}else {?>
 
@@ -272,12 +265,11 @@
         
         <?}?>
 
-        </li>
+        </article>
       
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
         
-    </ul>
     
     <!-- Prev/next controls -->
     <button class="slider__item__prev btn btn--slider__nav">&larr;</button>

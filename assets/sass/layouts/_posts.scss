@@ -5,8 +5,18 @@
 	@include max-width($bp3);
 }
 	.article-post__content {
-		display: table-cell;
 		vertical-align: top;
+		@media all and (min-width: $bp3) {
+			display: table-cell;
+		}
+		@extend %padding-horizontal;
+			
+			h2 {
+				@media all and (max-width: $bp3) {
+				font-size: 100%;
+				word-spacing: 5px;
+				}
+			}
 	}
 	.article-post__figure {
 		width: 50%;
@@ -19,19 +29,15 @@
 		}
 
 // Componente Post en Slider	
-.article-post--slider {
-	display: table;
-}
+.article-post--slider {}
 
 	.article-post--slider__figure {
 		width: 60%;
 		display: table-cell;
 	}
-		.article-post--slider__figure + .article-post__content {
+		.article-post__content {
 			width: 40%;
-			display: table-cell;
 			vertical-align: top;
-			padding-left: $gutterwidth * 2;
 
 			* {
 				@extend %clearfix;
@@ -41,6 +47,9 @@
 				@extend %text-left;
 				margin-bottom: $gutterwidth;
 				color: $white;
+				@media all and (min-width: $bp3) {
+					color: $black;
+				}
 			}
 
 			h2 + p {
@@ -49,11 +58,20 @@
 			}
 		}
 
-	.article-post--slider__meta-date {
+	.article-post__meta-date {
 		color: $color-alt;
-		margin-bottom: 0;
-		@include font-size(24);
-		font-style: italic;
+			font-style: italic;
+			@include font-size(15);
+			margin-bottom: 0;
+		@media all and (min-width: $bp3) {}
+	}
+	.article-post--slider__meta-date {
+		color: $white;
+			font-style: italic;
+			@include font-size(24);
+			margin-bottom: 0;
+		@media all and (min-width: $bp3) {
+		}
 	}
 
 

@@ -31,7 +31,7 @@
 
             <div class="article-post__content">
 
-                    <p class="article-post--slider__meta-date"><?php the_date('l, j F Y'); ?></p>
+                    <p class="article-post__meta-date"><?php the_date('l, j F Y'); ?></p>
                     <h2><?php the_title(); ?></h2>
                     <a class="btn" href="<?php the_permalink(); ?>">&rarr;</a>
 

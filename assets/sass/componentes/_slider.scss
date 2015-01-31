@@ -2,9 +2,9 @@
 //Slider
 .slider {
 
+	height: 455px;
 	padding-top: $gutterwidth;
 	position: relative;
-	// height: 375px;
 	z-index: 1;
 	background-color: $color-alt;
 	@include max-width($bp1);
@@ -18,45 +18,75 @@
 		transition: all .5s ease;
 	}
 
-	@media all and (min-width:450px) {
-		height: 500px;
-	}
+	@media all and (min-width:450px) {}
 }
 
   .slider__item {
 	@include max-width(900px);
 	position: absolute;
-	left: 0;
-	right: 0;
+	top: 50px;
     opacity: 0;
-    // background-color: $color-alt;
     overflow: hidden;
     padding-bottom: 5px;
+	
+	@media all and (min-width: 780px) {
+		width: 90%;
+		background-color: pink;
+	}
 
     &.current {
     	opacity: 1;
     }
   }
 
+
+
 .slider__figure {
 	position: relative;
-	// @extend %text-center;
+	@extend %text-center;
 	
+	@media all and (min-width: 780px) {
+		@include flexbox;
+		@include justify-content(center); //alineado horizontal
+		@include align-items(center); //alineado vertical
+		background-color: red;
+		width: 100%;
+	}
+
 	img {
-		width: 70%;
-		@media all and (min-width: $bp3) {
-			width: 100%;
+		
+		width: 250px;
+		height: 250px;
+		border-radius: 100%;
+
+		@media all and (min-width: 780px) {
+			width: 70%;
 			border-radius: $radius;
+			background-color: black;
 		}
 	}
+	
+	.slider__meta-date {
+		@extend %clearfix;
+    	font-size: 1.8rem;
+	}
+	
+	.slider__title {
+		@extend %clearfix;
+	}
+	
 	.slider__caption {
     	z-index: 10;
     	@extend %text-center;
-    	color: $black;
-    	@include font-size(36);
+    	color: $white;
+    	font-size: 1.5rem;
+    	line-height: 1.4;
 
-		@media all and (min-width: 410px) {}
-		
+		@media all and (min-width: 780px) {
+			width: 30%;
+			background-color: yellow;
+		}
+
 		&:hover {
 			// opacity: 1;
 	    	// background-color: transparentize($color-alt, .2);

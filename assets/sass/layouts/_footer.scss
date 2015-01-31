@@ -1,60 +1,58 @@
 // Footer principal
 .main-footer {
-	display: flex;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	flex-direction: column;
+	@include max-width($bp1);
+	@include align-content(center);
+	@include align-items(center);
 	background-color: $color-base;
-  	padding: $gutterwidth;
-
-  	@media (min-width:950px) {
-		flex-direction: row;
-		min-height: 217px;
-  	}
+  	padding: $gutterwidth / 2;
 	
-	li {
-		display: flex;
-		align-items: center;
-		line-height: 1;
-	}
+  	@media (min-width:$bp3) {
+		// min-height: 217px;
+  	}
 }
-	.main-footer__header { 
-		flex: 1;
-		margin-bottom: 0;
-	}
 
-	.main-footer__list { 
-		display: table;
-		width: 15%;
-		flex-grow: 1;
-		margin: 0;
-		padding: 0;
+	.main-footer__header {}
 
-		li {
-			display: table-cell;
+	.main-footer__social {
 
-			a {
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(center);
+		height: 75px;
+		@media all and (min-width: $bp3) {
+			// width: 19%;
+			@include order(3);
+		}
+
+		a {
+			width: 75px;
+			height: 75px;
 			transition: all .5s ease;
 			color: $black;
+
+				&:visited {
+					color: $black;
+				}
 
 				&:hover {
 					color: $white;
 				}
 
 		  		&::before {
-		  			font-size: 1.5rem;
-		  			margin-right: 10px;
+		  			font-size: 3.2rem;
 		  		}
-			}
 		}
 	}
 
 	.main-footer__credits {
-		flex: 2;
+		
+		@include max-width($bp1);
+		@extend %text-center;
+		@extend %padding-vertical;
+		background-color: $color-base;
 
 		aside {
-			margin-top: $gutterwidth;
+			// margin-top: $gutterwidth;
 		}
 
 		a, a:visited {
@@ -69,8 +67,11 @@
 	}
 
 	.main-footer__brand {
+		@extend %margin-vertical;
 		@extend %text-center;
-		flex-grow: 2;
+		@media all and (min-width: $bp3) {
+			@include order(2);
+		}
 		img {  
 			width: 100px;
 			height: auto;
@@ -88,7 +89,11 @@
 	}
 
 	.main-footer__searchform {
-		// flex-grow: 1;
+		
+		@extend %text-center;
+		@media all and (min-width: $bp3) {
+			@include order(1);
+		}
 		.screen-reader-text {
 			display: none;
 		}
