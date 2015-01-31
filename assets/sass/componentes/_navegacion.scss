@@ -7,13 +7,16 @@ Main navbar
 
 //Navegacion principal
 .nav-main {
+  label {
+    margin-bottom: 0;
+  }
 
   label::after {
-    position: fixed;
-    top: 27px;
-    right: 25px;
     width: 2em;
     height: 2em;
+    position: fixed;
+    top: 12px;
+    right: 12px;
     display: block;
     font-size: 2rem;
     content: "☰";
