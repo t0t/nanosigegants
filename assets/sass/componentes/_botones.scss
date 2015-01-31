@@ -95,8 +95,9 @@ input[type="submit"].btn:hover {
 	
 	margin-top: $gutterwidth;
 	border: 1px dotted $white;
+	font-size: 1.5rem;
 	// background-color: $color-base;
-	line-height: 3;
+	line-height: 2;
 	color: $white;
 	
 	&:visited {

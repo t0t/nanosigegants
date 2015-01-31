@@ -2,7 +2,7 @@
 //Slider
 .slider {
 
-	height: 455px;
+	height: 500px;
 	padding-top: $gutterwidth;
 	position: relative;
 	z-index: 1;
@@ -86,8 +86,8 @@
     	z-index: 10;
     	@extend %text-center;
     	color: $white;
-    	font-size: 1.5rem;
-    	line-height: 1.4;
+    	font-size: 1.9rem;
+    	line-height: 1.7;
 
 		@media all and (min-width: 780px) {
 			width: 30%;
