@@ -7,9 +7,9 @@ Template Name: Venta
 
 <main>
 
+
 	<!-- Content page template -->
 	<?php get_template_part('templates/content', 'page-template'); ?>
-    <?php get_template_part('templates/content', 'contacto'); ?>
 
 
 </main>

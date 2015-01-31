@@ -221,11 +221,13 @@
     
     <?php endwhile; ?>
     <?php endif; ?> 
+    
     </section>
 
 
 
     <?php elseif(get_row_layout() == "post-carrousel"): // Posts Carousel ?>
+
     <?php 
         $loop = new WP_Query( array( 
             'post_type' => '',
@@ -234,7 +236,7 @@
             )); 
     ?>
 
-<section class="slider">
+    <section class="slider">
 
     <?php the_sub_field("title"); ?>
     <?php the_sub_field("description"); ?>
@@ -276,11 +278,11 @@
         
     </div>
     
-    <!-- Prev/next controls -->
-    <button class="slider__item__prev btn btn--slider__nav">&larr;</button>
-    <button class="slider__item__next btn btn--slider__nav">&rarr;</button>
+        <!-- Prev/next controls -->
+        <button class="slider__item__prev btn btn--slider__nav">&larr;</button>
+        <button class="slider__item__next btn btn--slider__nav">&rarr;</button>
   
-</section>
+    </section>
 
     
 
@@ -327,9 +329,6 @@
     
     <section class="tienda section-wrap">
 
-    <!-- Page Header -->
-    <?php get_template_part('templates/page', 'header'); ?>
-
     <?php
     // check if the repeater field has rows of data
     if( have_rows('lista') ):
@@ -373,9 +372,6 @@
     <?php elseif(get_row_layout() == "links_gallery"): // Galeria de enlaces ?>
 
     <section class="galeria-links section-wrap">
-
-        <!-- Page Header -->
-        <?php get_template_part('templates/page', 'header'); ?>
 
         <div class="grid">
 
@@ -465,10 +461,6 @@
 
 
 
-
-
-
- 
 
 
 

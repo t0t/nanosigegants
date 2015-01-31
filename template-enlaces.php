@@ -7,8 +7,10 @@ Template Name: Enlaces
 
 <main>
 
-	<!-- Content page -->
-	<?php get_template_part('templates/content', 'page'); ?>
+
+
+	<!-- Content page template -->
+	<?php get_template_part('templates/content', 'page-template'); ?>    
 
 
 </main>
