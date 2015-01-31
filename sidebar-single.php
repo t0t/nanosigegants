@@ -1,9 +1,4 @@
 
-<h3>Sidebar Single</h3>
-
-
-Sidebar singleeeeeee
-
 
 
 	<?php if ( is_active_sidebar( 'sidebar-custom' ) ) : ?>

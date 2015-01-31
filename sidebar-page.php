@@ -1,7 +1,4 @@
 
-
-<h3>sidebar page</h3>
-
 <?php $args = array(
 	'depth'       => 0,
 	'sort_column' => 'menu_order, post_title',
