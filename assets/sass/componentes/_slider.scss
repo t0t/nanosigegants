@@ -31,7 +31,6 @@
 	
 	@media all and (min-width: 780px) {
 		// width: 90%;
-		background-color: pink;
 	}
 
     &.current {
@@ -41,10 +40,11 @@
 
 .slider__slides {
 	@media all and (min-width: 780px) {
-		@include flexbox;
-		@include align-content(center); //alineado horizontal
-		@include align-items(center); //alineado vertical
-		width: 90%;
+		
+		width: 50%;
+		height: 350px;
+		margin: 0 auto;
+		// border: 1px dotted $black-alpha-suave;
 	}
 }
 
@@ -62,11 +62,13 @@
 	img {
 		
 		width: 250px;
-		height: 250px;
+		height: 250px; //cambiar en wp thumbnail
 		border-radius: 100%;
+		margin: 0;
 
 		@media all and (min-width: 780px) {
-			width: 70%;
+			width: 350px;
+			height: auto;
 			border-radius: $radius;
 		}
 	}
@@ -89,6 +91,11 @@
 
 		@media all and (min-width: 780px) {
 			width: 30%;
+		}
+		@media all and (min-width: 1280px) {
+    		font-size: 3.3rem;
+    		line-height: 1.2;
+    		width: 50%;
 		}
 
 		&:hover {
