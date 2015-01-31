@@ -1,21 +1,29 @@
-<div class="main__content">
-    
-    <section class="main__content__section">
 
-    <!-- Flexible content -->
-    <?php get_template_part('templates/custom', 'fields'); ?>
+<div class="section-wrap">
 
-    </section>
+    <!-- Page Header -->
+    <?php get_template_part('templates/page', 'header'); ?>
 
-    <?php
 
-        if ( is_home() ) :
-        get_sidebar();
-        elseif ( is_404() ) :
-        get_sidebar( '404' );
-        else :
-        get_sidebar( 'userpicture' );
-        endif;
-    ?>
+    <!-- Loop -->
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+    <!-- Cargame los Custom fields, ACF -->
+    <?php get_template_part('templates/custom-fields'); ?>
+
+    <?php endwhile; ?>
+    <?php else: ?>
+    <?php endif; ?>    
+
 
 </div>
+
+
+    <!-- Sidebar -->
+    <?php if ( is_page() ) : ?>
+        <?php get_sidebar(); ?>
+    <?php elseif ( is_404() ) : ?>
+        <?php //get_sidebar( '404' ); ?>
+    <?php else : ?>
+        <?php //get_sidebar( 'userpicture' ); ?>
+    <?php endif; ?>

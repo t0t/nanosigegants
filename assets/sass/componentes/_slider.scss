@@ -75,7 +75,8 @@
 	
 	.slider__meta-date {
 		@extend %clearfix;
-    	font-size: 1.8rem;
+    	font-size: 1.2rem;
+    	letter-spacing: $baseletterspacing;
 	}
 	
 	.slider__title {

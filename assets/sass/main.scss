@@ -25,13 +25,13 @@ License URI:        http://opensource.org/licenses/MIT
 @import "lib/mixins/formularios";
 @import "lib/mixins/scroll";
 @import "lib/mixins/shapes";
-@import "componentes/slider";
 @import "lib/mixins/tipografia";
 @import "componentes/reset";
 
 @import "layouts/header";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "componentes/slider";
 @import "layouts/sidebar";
 @import "layouts/cpt";
 @import "layouts/footer";

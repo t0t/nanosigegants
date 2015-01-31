@@ -28,14 +28,8 @@
 			width: 50%;
 		}
 
-// Componente Post en Slider	
-.article-post--slider {}
 
-	.article-post--slider__figure {
-		width: 60%;
-		display: table-cell;
-	}
-		.article-post__content {
+	.article-post__content {
 			width: 40%;
 			vertical-align: top;
 
@@ -59,19 +53,15 @@
 		}
 
 	.article-post__meta-date {
+
+		@include font-size(24);
 		color: $color-alt;
-			font-style: italic;
-			@include font-size(15);
-			margin-bottom: 0;
+		font-style: italic;
+		line-height: 1;
+		margin-bottom: 0;
+		letter-spacing: $baseletterspacing;
+		
 		@media all and (min-width: $bp3) {}
-	}
-	.article-post--slider__meta-date {
-		color: $white;
-			font-style: italic;
-			@include font-size(24);
-			margin-bottom: 0;
-		@media all and (min-width: $bp3) {
-		}
 	}
 
 

@@ -11,8 +11,8 @@ register_nav_menus( array(
 ) );
 
 register_sidebar( array(
-	'name' => 'Barra lateral derecha',
-	'id' => 'sidebar-curso-wp',
+	'name' => 'Barra lateral derechar',
+	'id' => 'sidebar-custom',
 	'description'   => 'Barra lateral para que pongas lo que te de la gana',
   'class'         => 'clase-1',
 	'before_widget' => '<div class="widget">',

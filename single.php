@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
 <main>
- 	
-    <?php get_template_part( 'templates/content' ); ?>
+
+	<!-- Content single -->
+	<?php get_template_part('templates/content', 'single'); ?>
 
 </main>
 

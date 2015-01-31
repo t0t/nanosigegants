@@ -1,128 +1,41 @@
-<?php if( get_field('content_template_page') ): ?>
 
-     <?php while( has_sub_field("content_template_page") ): ?>
+<div class="section-wrap">
 
+    <!-- Page Header -->
+    <?php get_template_part('templates/page', 'header'); ?>
 
+    <!-- Loop -->
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+        <?php the_posts_navigation(); ?>
+        <?php posts_nav_link(); ?>
+        <?php previous_post_link(); ?>
+        <?php next_post_link(); ?>
+        <?php the_date(); ?> 
+        <?php the_tags(); ?>
 
+    <!-- Cargame los Custom fields, ACF -->
+    <?php get_template_part('templates/custom-fields'); ?>
 
-        <?php if(get_row_layout() == "video"): // Layout Videos ?>
-
-            <?php if(get_sub_field('video_repeater')): ?>
-            <?php while(has_sub_field('video_repeater')): ?>  
-
-            <div class="row">
-
-                    <?php //if (get_sub_field("video")): ?>
-                    <?php the_sub_field("video"); ?>
-                    <?php //endif ?>
-
-                    <?php if (get_sub_field("descripcion")): ?>
-                    <p><?php the_sub_field("descripcion"); ?></p>
-                    <?php endif ?>
-
-            </div>
-            
-            <?php endwhile; ?>
-            <?php endif; ?> 
-
-
-
-
-
-    <?php elseif(get_row_layout() == "sub_heading"): // Layout lista ?>
-    
-    <h3><?php the_sub_field('subheading'); ?> </h3>
-
-
-
-
-
-
-      <?php elseif(get_row_layout() == "list"): // Layout lista ?>
-                
-<div class="row">
-
-    <?php
-
-    // check if the repeater field has rows of data
-    if( have_rows('lista') ):
-
-        // loop through the rows of data
-        while ( have_rows('lista') ) : the_row();
-            ?>
-            <dl class="col__4">
-                <dt><?php the_sub_field('titulo'); ?></dt>
-                <?php while(has_sub_field('item_repeater')): ?>  
-                         
-                <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
-                                        
-                <?php endwhile; ?>
-                </dl>
-            <?
-        endwhile;
-
-    else :
-
-        // no rows found
-
-    endif;
-
-    ?>
-                
-</div>
-     
-
- 
-
-
-        <?php elseif(get_row_layout() == "quote"): //Layout Quotes?>
-
-            <div class="row">
-                <div class="col__12">
-                    <blockquote>
-                    <p><?php the_sub_field("quote"); ?></p>
-                    <small><?php the_sub_field("autor"); ?></small>
-                    </blockquote>
-                </div>
-            </div>
-
-
-
-
-
-        <?php elseif(get_row_layout() == "gallery"): //Layout Gallery ?>
-
-            <div class="row">
-                <h3 class="h1"><?php the_sub_field("title"); ?></h3>
-                <h3><?php the_sub_field("description"); ?></h3>
-            
-                <?php
-                $images = get_sub_field('gallery');
-             
-                if( $images ): ?>
-            
-                    <ul class="gallery">
-                        <?php foreach( $images as $image ): ?>
-                            <li>
-                                <figure>
-                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
-                                </a>
-                                <figcaption><?php echo $image['caption']; ?></figcaption>
-                                </figure>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-            
-                <?php endif; ?>
-            </div>
-
-
-
-
-        <?php endif; ?> 
- 
     <?php endwhile; ?>
+    <?php else: ?>
+    <?php endif; ?>    
 
- <?php endif; ?>
+
+    <!-- Navegacion -->
+    <h3>Navegació adicional</h3>
+
+    <?php previous_post_link(); ?>
+    <?php next_post_link(); ?>
+
+</div>
+
+
+    <!-- Sidebar -->
+    <?php if ( is_page() ) : ?>
+        <?php get_sidebar('page'); ?>
+    <?php elseif ( is_404() ) : ?>
+        <?php //get_sidebar( '404' ); ?>
+    <?php else : ?>
+        <?php //get_sidebar( 'userpicture' ); ?>
+    <?php endif; ?>

@@ -5,9 +5,12 @@ Template Name: Venta
 ?>
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 
-    <?php get_template_part('templates/custom', 'fields'); ?>
+	<!-- Content page template -->
+	<?php get_template_part('templates/content', 'page-template'); ?>
+    <?php get_template_part('templates/content', 'contacto'); ?>
+
 
 </main>
 

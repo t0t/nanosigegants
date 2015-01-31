@@ -5,16 +5,12 @@ Template Name: CPT
 ?>
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 
-	<!-- Nav -->
- 	<?php get_template_part('templates/nav', 'main' ); ?>
-
-	<!-- Header -->
-    <?php get_template_part('templates/page', 'header'); ?>
-
-    <!-- Content -->
+	<!-- Content page template -->
+	<?php get_template_part('templates/content', 'page-template'); ?>
     <?php get_template_part('templates/content', 'cpt'); ?>
+
 
 </main>
 

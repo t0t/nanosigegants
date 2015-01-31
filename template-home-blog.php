@@ -5,9 +5,15 @@ Template Name: Blog
 ?>
 <?php get_header(); ?>
 
+<main>
 
-<!-- Loop for posts -->
-<?php get_template_part('templates/content', 'home-posts'); ?>
+	<!-- Content page -->
+	<?php //get_template_part('templates/content', 'page'); ?>
+	
+	<!-- Loop for posts -->
+	<?php get_template_part('templates/content', 'home-posts'); ?>
 
+
+</main>
 
 <?php get_footer(); ?>

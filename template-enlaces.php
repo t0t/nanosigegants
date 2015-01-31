@@ -5,9 +5,11 @@ Template Name: Enlaces
 ?>
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 
-    <?php get_template_part('templates/custom', 'fields'); ?>
+	<!-- Content page -->
+	<?php get_template_part('templates/content', 'page'); ?>
+
 
 </main>
 

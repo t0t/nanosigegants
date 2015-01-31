@@ -7,10 +7,7 @@
 <!-- Bloques -->
 <?php if( have_rows('layout_content') ): ?>
 
-    <section class="section-wrap">
-
-    <!-- Page Header -->
-    <?php get_template_part('templates/page', 'header'); ?>
+    <section>
 
     <?php while ( have_rows('layout_content') ) : the_row();?>
     
@@ -39,10 +36,12 @@
 
         <?php elseif( get_row_layout() == '2_blocks' ):?>
 
+
         <div class="grid">
 
             <!-- repeater -->
             <?php if( have_rows('block')): ?>
+        
             <?php while (have_rows('block')) : the_row(); ?>
             
                 <div class="grid__item">
@@ -56,7 +55,10 @@
             
                 </div>
 
+
+
             <?php endwhile;?>
+
             <?php endif ?>
 
 
@@ -86,15 +88,16 @@
             
 
         <?php endif;?>
-    
-    
     <?php endwhile;?>
+
+
+
     </section>
+
 
 <?php else :?>
 <?php endif;?>
     
-
 
 
 

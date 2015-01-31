@@ -7,9 +7,11 @@ Template Name: Audiovisuals
 <?php get_header(); ?>
 <?php //print TubePressPro::getHtmlForShortcode('mode="tag" tagValue="pittsburgh steelers"'); ?>
 
-<main role="main">
+<main>
 
-    <?php get_template_part('templates/custom', 'fields'); ?>
+	<!-- Content page template -->
+	<?php get_template_part('templates/content', 'page-template'); ?>
+
 
 </main>
 

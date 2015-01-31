@@ -1,6 +1,6 @@
-<aside class="sidebar">
+<aside class="main__content__sidebar">
 
-<h3>Sidebar Single</h3>
+<h3></h3>
 
 <?php $args = array(
 	'depth'       => 0,
@@ -17,7 +17,7 @@
 
 	<?php if ( is_active_sidebar( 'sidebar-custom' ) ) : ?>
 		<!-- #start primary-sidebar -->
-	    <div class="sidebar__widgets">
+	    <div class="widgets main__content__widgets">
 			<?php dynamic_sidebar( 'sidebar-custom' ); ?>
 		</div>
 		<!-- #end primary-sidebar -->

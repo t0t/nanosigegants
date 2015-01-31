@@ -13,7 +13,7 @@
     'post__not_in' => array($this_post),
     'category_name' => 'noticies') ); 
     ?>
-
+xxx
         <!-- post -->
         <article class="grid">
 
@@ -31,9 +31,9 @@
 
             <div class="article-post__content">
 
-                    <p class="article-post__meta-date"><?php the_date('l, j F Y'); ?></p>
-                    <h2><?php the_title(); ?></h2>
-                    <a class="btn" href="<?php the_permalink(); ?>">&rarr;</a>
+                <small class="article-post__meta-date"><?php the_date('j F Y'); ?></small>
+                <h2><?php the_title(); ?></h2>
+                <a class="btn" href="<?php the_permalink(); ?>">&rarr;</a>
 
             </div>
 
@@ -54,6 +54,28 @@
             </div>
             
         <?php endwhile; ?>
+        
+
+        
+    <?php previous_post_link(); ?>
+
+
+
+    <?php if(is_single()) { // single-view navigation ?>
+
+    <?php $posts = query_posts($query_string); if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+    <?php previous_post_link(); ?> | <?php next_post_link(); ?>
+
+    <?php endwhile; endif; ?>
+
+    <?php } else { // archive view navigation ?>
+
+        <?php posts_nav_link(); ?>
+
+    <?php } ?>
+
+
 
         </article>
 

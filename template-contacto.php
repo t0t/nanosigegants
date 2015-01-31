@@ -7,11 +7,10 @@ Template Name: Contacto
 
 <main>
 
-    <section role="main">
-
+	<!-- Content page template -->
+	<?php get_template_part('templates/content', 'page-template'); ?>
     <?php get_template_part('templates/content', 'contacto'); ?>
 
-    </section>
 
 </main>
 
