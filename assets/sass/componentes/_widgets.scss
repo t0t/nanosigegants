@@ -2,65 +2,81 @@
     $WIDGETS
 \*------------------------------------*/
 
-// Sidebar
-.sidebar {
-	@include max-width($bp1);
-	background-color: $black;
-}
 
 // Widgets
 .widget {
-	
+
+	h3 {
+		color: $white;
+		letter-spacing: $baseletterspacing;
+	}
 }
-.widget--newsletter {
-	
-	@extend %basepadding;
-	@extend %text-center;
-	background-color: $color-alt;
 
+.widget--wp {
+	color: $white;
+}
 
-	form {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		@media screen and (min-width: $bp3) {
-			@include flexbox;
-			@include justify-content(space-around);
-			// @include align-content(center);
-			@include align-items(baseline);	
+.widget--posts {}
+
+.widget--pages {}
+
+.widget--tags {
+	.tagcloud {
+		a {
+			font-size: 2rem;
 		}
 	}
-
-	p {
-		padding-bottom: $gutterwidth / 2;
-		margin-right: $gutterwidth;
-	}
-
-	p, label {
-		color: $white;
-		margin-bottom: 0;
-	}
-	
-	input[type="email"] {
-		width: 50%;
-		@include flex-grow(2);
-		margin-right: 10px;
-		&::-webkit-input-placeholder {
-        	font-size: inherit;
-        	color: $grey;
-        	padding-left: $gutterwidth;
-    	}
-	}
-
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"] {
-		border: 3px solid $black-alpha-fuerte;
-		background-color: transparent;
-		width: 30%;
-	}
-
 }
+
+.widget--agenda {}
+
+.widget--newsletter {
+		
+		@extend %basepadding;
+		@extend %text-center;
+		background-color: $color-alt;
+
+		form {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			@media screen and (min-width: $bp3) {
+				@include flexbox;
+				@include justify-content(space-around);
+				@include align-items(baseline);	
+			}
+		}
+
+		h3 {
+			padding-bottom: $gutterwidth / 2;
+			margin-right: $gutterwidth;
+		}
+
+		h3, label {
+			color: $white;
+			margin-bottom: 0;
+		}
+		
+		input[type="email"] {
+			width: 50%;
+			@include flex-grow(2);
+			margin-right: 10px;
+			&::-webkit-input-placeholder {
+	        	font-size: inherit;
+	        	color: $grey;
+	        	padding-left: $gutterwidth;
+	    	}
+		}
+
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
+			border: 3px solid $black-alpha-fuerte;
+			background-color: transparent;
+			width: 30%;
+		}
+
+	}
 
 
 

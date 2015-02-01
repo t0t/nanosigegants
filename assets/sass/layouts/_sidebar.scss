@@ -1,17 +1,35 @@
 
 .sidebar {
+
+	@include max-width($bp1);
+
+	background-color: darken($color-alt, 10%);
+
+	padding-top: $gutterwidth / 2;
+
 	
-	background-color: #f3f3f3;
-	width: 100%;
+	
+	h2, h4 {
+
+		color: $white;
+
+	}
+
+
+	img {
+
+		width: inherit;
+	}
 
 	figure {
+
 		> a {
-			float: left;
+
 			@extend %clearfix;
+
 		}
-		figcaption {
-			float: right;
-			width: 80%;
-		}
+
+		figcaption {}
 	}
+
 }

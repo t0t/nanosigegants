@@ -5,7 +5,7 @@
 <?php $args = array(
 	'depth'       => 0,
 	'sort_column' => 'menu_order, post_title',
-	'menu_class'  => 'menu',
+	'menu_class'  => 'widget pageposts',
 	'include'     => '212,18,16,286',
 	'exclude'     => '',
 	'echo'        => true,
@@ -17,9 +17,7 @@
 
 	<?php if ( is_active_sidebar( 'sidebar-custom' ) ) : ?>
 		<!-- #start primary-sidebar -->
-	    <div class="widgets main__content__widgets">
 			<?php dynamic_sidebar( 'sidebar-custom' ); ?>
-		</div>
 		<!-- #end primary-sidebar -->
 	<?php endif; ?>
 	

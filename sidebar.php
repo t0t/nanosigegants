@@ -12,18 +12,17 @@
         <?php get_sidebar('page'); ?>
 
     <?php //elseif ( is_page_template() ) : ?>
-        
         <?php //get_sidebar('page-template.php'); ?>
 
     <?php else : ?>
     <p>ups, no sidebar!</p>   
     <?php endif; ?>
 
-    <footer class="widget widget--newsletter">
+    <div class="widget widget--newsletter">
 
 			<form action="//nanosigegants.us10.list-manage.com/subscribe/post?u=f12298f0773d67aadf06c2fc4&amp;id=a1594d1567" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-				<p>Newsletter</p>
+				<h3>newsletter</h3>
 
 				<label for="mce-EMAIL"></label>
 				<input type="email" value="" name="EMAIL" placeholder="Tu email aquí" id="mce-EMAIL">
@@ -34,6 +33,6 @@
 
 			</form>
 
-    </footer>
+    </div>
 
 </aside>

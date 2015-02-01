@@ -1,26 +1,67 @@
 
-<?php $args = array(
-	'depth'       => 0,
-	'sort_column' => 'menu_order, post_title',
-	'menu_class'  => 'menu',
-	'include'     => '212,18,16,286',
-	'exclude'     => '',
-	'echo'        => true,
-	'show_home'   => false,
-	'link_before' => '',
-	'link_after'  => '' );
-?>
-<?php wp_page_menu( $args ); ?>
+
+<div class="widget widget--pages">
+
+	<h3>més informació sobre La Colla</h3>
+
+	<!-- http://www.billerickson.net/code/wp_query-arguments/ -->
+	<?php 
+    $this_post = $post->ID;
+
+    $loop = new WP_Query( array( 
+    	'post_type' => 'page',
+    	'posts_per_page' => '5',
+    	'posts_per_archive_page' => 10,
+    	'post__in' => array( 14, 212, 18, 16, 286, 20 ),
+    	'post__not_in' => array($this_post),
+    	'orderby' => 'date',
+    	'order' => 'DESC',
+    	// 'year' => 2012,
+    	'category_name' => '') ); 
+    ?>
+
+    <article class="post--sidebar">
+
+    <!-- Custom Loop -->
+    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+        
+
+            <? if ( has_post_thumbnail() ) { ?>
+
+                <figure class="post--sidebar__figure">
+
+	               <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+		                <?php the_post_thumbnail('thumbnail'); ?>
+
+		                <figcaption class="post--sidebar__content">
+
+	                		<small class="post__meta-date"><?php the_date('j F Y'); ?></small>
+		                	<?php the_title(); ?> &rarr;
+
+		                </figcaption>
+
+	               </a>
+
+                </figure>
+
+
+            <?}else {?>
+			<?}?>
+
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); // reset ?>
+
+    </article>
+
+</div>
+
+
+
+
+
 
 
 
 	<?php if ( is_active_sidebar( 'sidebar-custom' ) ) : ?>
-
-		<!-- #start primary-sidebar -->
-	    <div class="widgets main__content__widgets">
-
-			<?php dynamic_sidebar( 'sidebar-custom' ); ?>
-
-		</div>
-		<!-- #end primary-sidebar -->
+		<?php dynamic_sidebar( 'sidebar-custom' ); ?>
 	<?php endif; ?>

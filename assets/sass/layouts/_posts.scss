@@ -1,35 +1,35 @@
 
-// Componente Post
-.article-post {
-	display: table;
+
+
+
+
+
+// Post
+.post {
+
+	display: table;	
 	@include max-width($bp3);
+
 }
-	.article-post__content {
-		vertical-align: top;
-		@media all and (min-width: $bp3) {
-			display: table-cell;
-		}
-		@extend %padding-horizontal;
-			
-			h2 {
-				@media all and (max-width: $bp3) {
-				font-size: 100%;
-				word-spacing: 5px;
-				}
-			}
-	}
-	.article-post__figure {
+
+	.post__figure {
+
 		width: 50%;
 		display: table-cell;
+
 	}
-		.article-post__figure + p {
+
+		.post__figure + p {
+
 			background-color: red;
 			display: table-cell;
 			width: 50%;
+
 		}
 
 
-	.article-post__content {
+	.post__content {
+
 			width: 40%;
 			vertical-align: top;
 
@@ -52,7 +52,7 @@
 			}
 		}
 
-	.article-post__meta-date {
+	.post__meta-date {
 
 		@include font-size(24);
 		color: $color-alt;
@@ -66,4 +66,96 @@
 
 
 
+
+
+
+// Posts en Sidebar
+
+  .post--sidebar {
+
+	@extend %text-center;
+
+		@media all and (min-width: $bp3) {
+
+		    @include flexbox;
+		    @include flex-flow(row wrap);
+		    @include justify-content(space-around);
+
+	  	}
+
+	}
+
+
+	.post--sidebar__figure {
+
+		@media all and (min-width: $bp3) {
+
+			width: calc(50% - #{$gutterwidth});
+
+    	}
+
+
+	    @media all and (min-width: 768px) {
+
+	    	width: calc(33% - #{$gutterwidth});
+
+	    }
+
+
+	    @media all and (min-width: 1280px) {
+
+	    	width: calc(20% - #{$gutterwidth});
+
+	    }
+
+
+	    img {
+
+			@media all and (min-width: $bp3) {
+
+				width: calc(50% - #{$gutterwidth});
+
+	    	}
+
+
+		    @media all and (min-width: 768px) {
+
+		    	width: calc(33% - #{$gutterwidth});
+
+		    }
+
+
+		    @media all and (min-width: 1280px) {
+
+		    	width: calc(20% - #{$gutterwidth});
+
+		    }
+
+	    }
+
+	}
+
+
+	.post--sidebar__content {
+
+		@media all and (min-width: $bp3) {
+			width: calc(50% - #{$gutterwidth});
+    	}
+	    @media all and (min-width: 768px) {
+	    	width: calc(100% - #{$gutterwidth});
+	    }
+
+	}
+
+	.post--sidebar__meta-date {
+
+		@include font-size(24);
+		color: $color-alt;
+		font-style: italic;
+		line-height: 1;
+		margin-bottom: 0;
+		letter-spacing: $baseletterspacing;
+		
+		@media all and (min-width: $bp3) {}
+	}
 

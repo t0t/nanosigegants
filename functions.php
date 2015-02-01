@@ -15,10 +15,10 @@ register_sidebar( array(
 	'id' => 'sidebar-custom',
 	'description'   => 'Barra lateral para que pongas lo que te de la gana',
   'class'         => 'clase-1',
-	'before_widget' => '<div class="widget">',
+	'before_widget' => '<div class="widget widget--wp">',
 	'after_widget' => '</div>',
-	'before_title' => '<h2 class="rounded">',
-	'after_title' => '</h2>',
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
 ) );
 
 // Allows svg load into media uploader 
