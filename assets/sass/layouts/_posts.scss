@@ -33,24 +33,39 @@
 			width: 40%;
 			vertical-align: top;
 
+
 			* {
 				@extend %clearfix;
 			}
 
+
 			h2 {
+
 				@extend %text-left;
+
 				margin-bottom: $gutterwidth;
-				color: $white;
+
+				color: $white-alpha-medio;
+
+
 				@media all and (min-width: $bp3) {
+
 					color: $black;
+
 				}
+
 			}
 
+
 			h2 + p {
+
 				margin-bottom: $gutterwidth;
 				@extend %line-height-smaller;
+
 			}
+
 		}
+
 
 	.post__meta-date {
 
@@ -62,6 +77,7 @@
 		letter-spacing: $baseletterspacing;
 		
 		@media all and (min-width: $bp3) {}
+
 	}
 
 
@@ -111,6 +127,13 @@
 
 	    img {
 
+	    	filter: grayscale(1);
+			-webkit-filter: grayscale(1);
+			-moz-filter: grayscale(1);
+			-o-filter: grayscale(1);
+			-ms-filter: grayscale(1);
+
+
 			@media all and (min-width: $bp3) {
 
 				width: calc(50% - #{$gutterwidth});
@@ -139,23 +162,36 @@
 	.post--sidebar__content {
 
 		@media all and (min-width: $bp3) {
+
 			width: calc(50% - #{$gutterwidth});
+
     	}
+
+
 	    @media all and (min-width: 768px) {
+
 	    	width: calc(100% - #{$gutterwidth});
+
 	    }
 
 	}
 
+
 	.post--sidebar__meta-date {
 
 		@include font-size(24);
-		color: $color-alt;
+
+		color: $white-alpha-medio;
+
 		font-style: italic;
+
 		line-height: 1;
+
 		margin-bottom: 0;
+
 		letter-spacing: $baseletterspacing;
 		
 		@media all and (min-width: $bp3) {}
+
 	}
 

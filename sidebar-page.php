@@ -35,7 +35,7 @@
 
 		                <figcaption class="post--sidebar__content">
 
-	                		<small class="post__meta-date"><?php the_date('j F Y'); ?></small>
+	                		<small class="post--sidebar__meta-date"><?php the_date('j F Y'); ?></small>
 		                	<?php the_title(); ?> &rarr;
 
 		                </figcaption>

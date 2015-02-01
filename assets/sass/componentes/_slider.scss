@@ -74,9 +74,12 @@
 	}
 	
 	.slider__meta-date {
+
+		color: $white-alpha-medio;
 		@extend %clearfix;
     	font-size: 1.2rem;
     	letter-spacing: $baseletterspacing;
+
 	}
 	
 	.slider__title {

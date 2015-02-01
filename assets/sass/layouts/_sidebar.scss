@@ -1,6 +1,22 @@
 
 .sidebar {
 
+	* {
+		letter-spacing: $baseletterspacing;
+	}
+
+
+	a, a:visited {
+
+		color: $black;
+
+		&:hover {
+			color: $white;
+		}
+
+	}
+
+
 	@include max-width($bp1);
 
 	background-color: darken($color-alt, 10%);
@@ -9,9 +25,9 @@
 
 	
 	
-	h2, h4 {
+	h3, h2, h4 {
 
-		color: $white;
+		color: $white-alpha-medio;
 
 	}
 
