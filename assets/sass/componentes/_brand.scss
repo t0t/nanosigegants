@@ -3,7 +3,7 @@
 	// @include justify-content(center); //alineado horizontal
 	@include align-items(center); //alineado vertical
 	padding-top: $gutterwidth / 2;
-	padding-left: $gutterwidth * 2;
+	// padding-left: $gutterwidth * 2;
 	padding-bottom: 0;
 	
 	@media all and (min-width: $bp3) {

@@ -54,19 +54,7 @@
 
 
     <!-- Navegacion -->
-    <h3>Navegació adicional</h3>
-
-    <?php previous_post_link(); ?>
-    <?php next_post_link(); ?>
+    <?php //previous_post_link(); ?>
+    <?php //next_post_link(); ?>
 
 </div>
-
-
-    <!-- Sidebar -->
-    <?php if ( is_page_template() ) : ?>
-        <?php get_sidebar('page-posts'); ?>
-    <?php elseif ( is_404() ) : ?>
-        <?php //get_sidebar( '404' ); ?>
-    <?php else : ?>
-        <?php //get_sidebar( 'userpicture' ); ?>
-    <?php endif; ?>

@@ -22,7 +22,7 @@
 }
 
   .slider__item {
-	@include max-width(900px);
+	//@include max-width(900px);
 	position: absolute;
 	top: 50px;
     opacity: 0;

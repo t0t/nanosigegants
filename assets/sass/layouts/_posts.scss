@@ -8,7 +8,10 @@
 .post {
 
 	display: table;	
+	
 	@include max-width($bp3);
+
+	@extend %margin-vertical;
 
 }
 
@@ -16,21 +19,22 @@
 
 		width: 50%;
 		display: table-cell;
+		padding: $gutterwidth * 2;
+
+
+		img {
+			
+		}
 
 	}
 
-		.post__figure + p {
-
-			background-color: red;
-			display: table-cell;
-			width: 50%;
-
-		}
+		.post__figure + p {}
 
 
 	.post__content {
 
-			width: 40%;
+			display: table-cell;
+			width: 50%;
 			vertical-align: top;
 
 

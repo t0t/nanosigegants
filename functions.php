@@ -1,6 +1,7 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
+add_image_size('mini', 75, 75, true);
 
 // register_sidebars( 2, array( 'name' => 'Zona %d' ) ); //sidebar-1, sidebar-2
 

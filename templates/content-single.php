@@ -22,9 +22,7 @@
 
 
     <!-- Navegacion -->
-    <h3>Navegació</h3>
-
-    <nav class="post--nav"> 
+    <nav class="nav--posts"> 
 
         <ul>
             <li>
@@ -36,17 +34,22 @@
                 if($prevPost) 
             {
                 $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'mini', array('class' => 'img--rounded') );
+
                 previous_post_link('%link', "$prevthumbnail &larr; %title"); 
             } 
             ?>
             </li>
 
-             <li>
+
+             <!-- <li>
+
                 <a href="/blog/">
-                <i class="icon-house"></i>
+                <i class="icon-house"></i> -->
                 <?php //$post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?>
-                </a>
-            </li>
+                <!-- </a>
+
+            </li> -->
+
 
             <li>
             
@@ -56,12 +59,16 @@
 
                 if($nextPost) 
             {
-                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--circle'));  
+                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--circle')); 
+
                 next_post_link('%link', "%title &rarr; $nextthumbnail"); 
             }
             ?>
+
             </li>
+
         </ul>
+
     </nav>
 
 </div>

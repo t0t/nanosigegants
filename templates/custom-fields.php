@@ -201,7 +201,7 @@
 
     <section class="video-main section-wrap">
         
-        <h2 class="video-main__header">Video</h2>
+        <h2 class="video-main__header"></h2>
         
     <?php if(get_sub_field('video_repeater')): ?>
 
