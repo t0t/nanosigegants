@@ -11,7 +11,7 @@
         
     <?php elseif ( is_search() ) : ?>
         
-    <h2>informació amb la paraula: "<span class="h1"><?php the_search_query() ?></span>"</h2>
+    <h2>"<?php the_search_query() ?>"</h2>
     <?php //echo esc_html( get_search_query( false ) ); ?>
 
 

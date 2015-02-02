@@ -43,6 +43,9 @@
 
     <?php endwhile; ?>
     <?php else: ?>
+
+			Ups!, en este sitio web no se utiliza la palabra "<?php echo esc_html( get_search_query( false ) ); ?>" en ninguna ocasión.
+
     <?php endif; ?>    
 	
 	</section>
