@@ -45,23 +45,22 @@
 // Efecto SHAKE
 @include keyframe(animacion--shake) {
 
-    from {
+	from {
 
-      @include rotate(0deg);
+      @include translateX(20px)
 
     }
 
     to {
 
-      @include rotate(360deg); 
+      @include translateX(0px) 
 
     }
 
   }
 
 .efecto--shake {
-  @include animation(animacion--shake, 0s, 5s, ease, 1);
-  background-color: red
+  @include animation(animacion--shake, 0s, 1s, ease, 1);
 }
 
 

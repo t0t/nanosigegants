@@ -1058,13 +1058,13 @@ input:required:focus:valid { background-color: #4dff4d; border: 1px solid green;
   50% { opacity: 0; } }
 .efecto--intro { -webkit-animation-name: animacion--intro; animation-name: animacion--intro; -webkit-animation-delay: 1s; animation-delay: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease; animation-timing-function: ease; -moz-animation-name: animacion--intro; -moz-animation-delay: 1s; -moz-animation-duration: 1s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease; -webkit-animation-name: animacion--intro; -webkit-animation-delay: 1s; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease; }
 
-@keyframes animacion--shake { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
-@-ms-keyframes animacion--shake { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
-@-webkit-keyframes animacion--shake { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
-.efecto--shake { -webkit-animation-name: animacion--shake; animation-name: animacion--shake; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: 5s; animation-duration: 5s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease; animation-timing-function: ease; -moz-animation-name: animacion--shake; -moz-animation-delay: 0s; -moz-animation-duration: 5s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease; -webkit-animation-name: animacion--shake; -webkit-animation-delay: 0s; -webkit-animation-duration: 5s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease; background-color: red; }
+@keyframes animacion--shake { from { -webkit-transform: translate(20px); -ms-transform: translate(20px); transform: translate(20px); }
+  to { -webkit-transform: translate(0px); -ms-transform: translate(0px); transform: translate(0px); } }
+@-ms-keyframes animacion--shake { from { -webkit-transform: translate(20px); -ms-transform: translate(20px); transform: translate(20px); }
+  to { -webkit-transform: translate(0px); -ms-transform: translate(0px); transform: translate(0px); } }
+@-webkit-keyframes animacion--shake { from { -webkit-transform: translate(20px); -ms-transform: translate(20px); transform: translate(20px); }
+  to { -webkit-transform: translate(0px); -ms-transform: translate(0px); transform: translate(0px); } }
+.efecto--shake { -webkit-animation-name: animacion--shake; animation-name: animacion--shake; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease; animation-timing-function: ease; -moz-animation-name: animacion--shake; -moz-animation-delay: 0s; -moz-animation-duration: 1s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease; -webkit-animation-name: animacion--shake; -webkit-animation-delay: 0s; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease; }
 
 @keyframes animacion--gira { from { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); }
   to { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); } }
