@@ -30,23 +30,52 @@
 }
 
 
+
+// animacion intro fade
 @include keyframe(animacion--intro) {
 	0%, 100% {opacity: 1}
 	50% {opacity:0}
 }
 
 .efecto--intro {
-  @include animation(animacion--intro, 2s, 1s, ease, 1);
+  @include animation(animacion--intro, 1s, 1s, ease, 1);
 }
+
+
+// Efecto SHAKE
+@include keyframe(animacion--shake) {
+
+    from {
+
+      @include rotate(0deg);
+
+    }
+
+    to {
+
+      @include rotate(360deg); 
+
+    }
+
+  }
+
+.efecto--shake {
+  @include animation(animacion--shake, 0s, 5s, ease, 1);
+  background-color: red
+}
+
+
+
+
 
   @include keyframe(animacion--gira) {
     from {
-      @include rotate(0deg);
-    }
-    to {
       @include rotate(360deg); 
     }
-  }
+    to {
+      @include rotate(0deg);
+    }
+}
 
 .efecto--gira {
   @include animation (animacion--gira, 3s, 2s, linear, 1);

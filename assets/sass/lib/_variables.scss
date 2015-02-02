@@ -91,7 +91,7 @@ $black 				: rgb(0,0,0);
 $black-alpha		: transparentize($black, .3);
 $black-alpha-suave 	: transparentize($black, .1);
 $black-alpha-medio	: transparentize($black, .5);
-$black-alpha-fuerte	: transparentize($black, .8);
+$black-alpha-fuerte	: transparentize($black, .9);
 
 $white				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.3);
@@ -179,12 +179,12 @@ $buttonborderstyle  : solid;
 
 
 // formularios
-$inputbackground    : $white;
+$inputbackground    : $black-alpha-fuerte;
 $inputborder        : $color-base;
 $inputborderwidth   : 1px;
 $inputborderstyle   : dotted;
 $inputhover         : lighten($black, 50%);
-$inputfocus         : lighten($color-base, 33%);
+$inputfocus         : $white-alpha-suave;
 $placeholdercolor   : $color-base-darken;
 
 

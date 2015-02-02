@@ -832,7 +832,7 @@ Main navbar
 .widget--newsletter h3, .widget--newsletter label { color: white; margin-bottom: 0; }
 .widget--newsletter input[type="email"] { width: 50%; -webkit-box-flex: 2; -webkit-flex-grow: 2; -moz-flex-grow: 2; -ms-flex-positive: 2; flex-grow: 2; margin-right: 10px; }
 .widget--newsletter input[type="email"]::-webkit-input-placeholder { font-size: inherit; color: gray; padding-left: 3%; }
-.widget--newsletter input[type="button"], .widget--newsletter input[type="reset"], .widget--newsletter input[type="submit"] { border: 3px solid rgba(0, 0, 0, 0.2); background-color: transparent; width: 30%; }
+.widget--newsletter input[type="button"], .widget--newsletter input[type="reset"], .widget--newsletter input[type="submit"] { border: 3px solid rgba(0, 0, 0, 0.1); background-color: transparent; width: 30%; }
 
 .idiomas { margin: 0.8em; display: table; display: none; width: 90px; float: right; padding: 8px 35px 8px 14px; line-height: 1; background-color: #714232; }
 .idiomas li { display: table-cell; font-size: 18px; font-size: 0.9rem; }
@@ -905,9 +905,9 @@ input, button, select, textarea { -ms-box-sizing: border-box; box-sizing: border
 label { display: block; margin-bottom: 0.2em; color: black; cursor: pointer; }
 label input, label textarea, label select { display: block; }
 
-input, textarea, select { display: inline-block; width: 100%; padding: 10px; margin-bottom: 0.4em; background-color: white; border: 1px dotted #8c4c35; color: black; }
+input, textarea, select { display: inline-block; width: 100%; padding: 10px; margin-bottom: 0.4em; background-color: rgba(0, 0, 0, 0.1); border: none; color: black; }
 input:hover, textarea:hover, select:hover { border-color: gray; }
-input:focus, textarea:focus, select:focus { background-color: #d6a593; }
+input:focus, textarea:focus, select:focus { background-color: rgba(255, 255, 255, 0.1); }
 
 input[type="image"], input[type="checkbox"], input[type="radio"] { width: auto; height: auto; padding: 0; margin: 6px 0; *margin-top: 0; line-height: normal; cursor: pointer; border: 0 \9; }
 
@@ -921,7 +921,7 @@ input[type="button"], input[type="reset"], input[type="submit"] { width: auto; h
 
 select, input[type="file"] { height: 28px; *margin-top: 4px; line-height: 28px; }
 
-select { background-color: white; font-size: 13px; font-size: 0.65rem; }
+select { background-color: rgba(0, 0, 0, 0.1); font-size: 13px; font-size: 0.65rem; }
 
 select[multiple], select[size] { height: auto; }
 
@@ -939,7 +939,7 @@ input[type="hidden"] { display: none; }
 
 input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] { -webkit-opacity: 0.5; -moz-opacity: 0.5; opacity: 0.5; cursor: not-allowed; }
 
-input:focus, textarea:focus { border-color: #d6a593; outline: 0; outline: thin dotted \9; }
+input:focus, textarea:focus { border-color: rgba(255, 255, 255, 0.1); outline: 0; outline: thin dotted \9; }
 
 input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus, select:focus { box-shadow: none; }
 
@@ -1056,14 +1056,22 @@ input:required:focus:valid { background-color: #4dff4d; border: 1px solid green;
   50% { opacity: 0; } }
 @-webkit-keyframes animacion--intro { 0%, 100% { opacity: 1; }
   50% { opacity: 0; } }
-.efecto--intro { -webkit-animation-name: animacion--intro; animation-name: animacion--intro; -webkit-animation-delay: 2s; animation-delay: 2s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease; animation-timing-function: ease; -moz-animation-name: animacion--intro; -moz-animation-delay: 2s; -moz-animation-duration: 1s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease; -webkit-animation-name: animacion--intro; -webkit-animation-delay: 2s; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease; }
+.efecto--intro { -webkit-animation-name: animacion--intro; animation-name: animacion--intro; -webkit-animation-delay: 1s; animation-delay: 1s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease; animation-timing-function: ease; -moz-animation-name: animacion--intro; -moz-animation-delay: 1s; -moz-animation-duration: 1s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease; -webkit-animation-name: animacion--intro; -webkit-animation-delay: 1s; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease; }
 
-@keyframes animacion--gira { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
+@keyframes animacion--shake { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
-@-ms-keyframes animacion--gira { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
+@-ms-keyframes animacion--shake { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
-@-webkit-keyframes animacion--gira { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
+@-webkit-keyframes animacion--shake { from { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
+.efecto--shake { -webkit-animation-name: animacion--shake; animation-name: animacion--shake; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: 5s; animation-duration: 5s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease; animation-timing-function: ease; -moz-animation-name: animacion--shake; -moz-animation-delay: 0s; -moz-animation-duration: 5s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease; -webkit-animation-name: animacion--shake; -webkit-animation-delay: 0s; -webkit-animation-duration: 5s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease; background-color: red; }
+
+@keyframes animacion--gira { from { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); } }
+@-ms-keyframes animacion--gira { from { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); } }
+@-webkit-keyframes animacion--gira { from { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); } }
 .efecto--gira { -webkit-animation-name: animacion--gira; animation-name: animacion--gira; -webkit-animation-delay: 3s; animation-delay: 3s; -webkit-animation-duration: 2s; animation-duration: 2s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: linear; animation-timing-function: linear; -moz-animation-name: animacion--gira; -moz-animation-delay: 3s; -moz-animation-duration: 2s; -moz-animation-iteration-count: 1; -moz-animation-timing-function: linear; -webkit-animation-name: animacion--gira; -webkit-animation-delay: 3s; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: linear; }
 
 @keyframes efecto-stroke-dashoffset { 50% { stroke-dashoffset: 0; } }

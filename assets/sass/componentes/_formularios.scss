@@ -77,7 +77,8 @@ select {
 	padding : 10px;
 	margin-bottom : $baselineheight / 4;
 	background-color : $inputbackground;
-	border : $inputborderwidth $inputborderstyle $inputborder;
+	border : none;
+	// border : $inputborderwidth $inputborderstyle $inputborder;
 	color : $textcolor;
 
 	&:hover {
