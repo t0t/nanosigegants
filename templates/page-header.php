@@ -12,10 +12,12 @@
     <?php elseif ( is_search() ) : ?>
         
     <h2>informació amb la paraula: "<span class="h1"><?php the_search_query() ?></span>"</h2>
+    <?php //echo esc_html( get_search_query( false ) ); ?>
+
 
     <?php elseif ( is_404() ) : ?>
         
-    <h2>ups!</h2>
+    <h2>Pagina no encontrada!</h2>
 
 
     <?php else : ?>

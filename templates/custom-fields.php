@@ -161,7 +161,7 @@
 
     <?php elseif(get_row_layout() == "gallery"): // Layout Gallery ?>
 
-    <section class="section-wrap">
+    <section class="main__content">
     
         <div class="galeria-fotos">
 
@@ -199,7 +199,7 @@
 
     <?php elseif(get_row_layout() == "video"): // Layout Videos ?>
 
-    <section class="video-main section-wrap">
+    <section class="video-main main__content">
         
         <h2 class="video-main__header"></h2>
         
@@ -327,7 +327,7 @@
 
     <?php elseif(get_row_layout() == "tienda"): // tienda ?>
     
-    <section class="tienda section-wrap">
+    <section class="tienda main__content">
 
     <?php
     // check if the repeater field has rows of data
@@ -371,7 +371,7 @@
 
     <?php elseif(get_row_layout() == "links_gallery"): // Galeria de enlaces ?>
 
-    <section class="galeria-links section-wrap">
+    <section class="galeria-links main__content">
 
         <div class="grid">
 
@@ -411,7 +411,7 @@
 
     <?php elseif(get_row_layout() == "content_summary"): // Sumario de contenido ?>
                 
-    <section class="content-summary section-wrap">
+    <section class="content-summary main__content">
     
         <div class="grid">
 

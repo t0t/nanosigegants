@@ -39,7 +39,7 @@ img {
 
 
 // LAYOUT
-.section-wrap {
+.main__content {
 	@include max-width($bp1);
     background-color: $white;
     @media all and (min-width: $bp3) {
