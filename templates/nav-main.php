@@ -17,7 +17,7 @@
 </nav>
 
 
-<nav>
+<nav class="nav-barra">
 
 	<?php
 

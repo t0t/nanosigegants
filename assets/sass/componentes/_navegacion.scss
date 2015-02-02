@@ -1,15 +1,44 @@
 /*********************
 Main navbar
 **********************/
+
 //Navegacion general
-.nav {
+.nav-barra {
+
+  a {
+
+    @include transition(.4s);
+
+    border-radius: $radius * 4;
+    // border: dashed 3px $color-alt;
+    padding: 5px 12px;
+
+    &:hover {
+
+      background-color: $color-alt;
+
+    }
+
+  }
+
+  ul {
+
+    padding-left: 0;
+
+  }
+
+  .current-menu-item {
+
+    a {
+
+      background-color: $color-base;
+
+    }
+
+  }
+
 }
 
-nav {
-  ul {
-    padding-left: 0;
-  }
-}
 
 //Navegacion principal
 .nav-main {
@@ -154,14 +183,6 @@ nav {
     display: none;
   }
   
-  .current-menu-item {
-    a {
-      border-radius: $radius * 4;
-      // border: dashed 3px $color-alt;
-      padding: 5px 12px;
-      background-color: $color-base;
-    }    
-  }
 
   .nav-header__item, li {
     display: table-cell;

@@ -697,6 +697,8 @@ hr { clear: both; margin: 1.6em 0; padding: 0; height: 1px; border: 0; border-to
 
 .img--circle { border-radius: 100%; }
 
+.img--noajust { width: inherit; }
+
 /*------------------------------------*\ $ELEMENTOS-FIGURE
 \*------------------------------------*/
 figure figcaption { font-style: italic; }
@@ -784,7 +786,10 @@ sub { bottom: -2.25em; }
 /*********************
 Main navbar
 **********************/
-nav ul { padding-left: 0; }
+.nav-barra a { -webkit-transition: all 0.4s; transition: all 0.4s; border-radius: 20px; padding: 5px 12px; }
+.nav-barra a:hover { background-color: #326171; }
+.nav-barra ul { padding-left: 0; }
+.nav-barra .current-menu-item a { background-color: #8c4c35; }
 
 .nav-main label { margin-bottom: 0; }
 .nav-main label::after { width: 2em; height: 2em; position: fixed; top: 12px; right: 12px; display: block; font-size: 2rem; content: "☰"; z-index: 25; line-height: 2.1; text-align: center; background-color: #326171; border-radius: 100%; color: white; }
@@ -808,7 +813,6 @@ nav ul { padding-left: 0; }
 .nav-header { min-height: 57px; margin: 0 auto; max-width: 1420px; background-color: black; border-radius: 5px; display: none; }
 @media all and (min-width: 780px) { .nav-header { display: table; } }
 .nav-header li ul { display: none; }
-.nav-header .current-menu-item a { border-radius: 20px; padding: 5px 12px; background-color: #8c4c35; }
 .nav-header .nav-header__item, .nav-header li { display: table-cell; width: 12%; vertical-align: middle; font-size: 1.2rem; }
 .nav-header .nav-header__item a, .nav-header .nav-header__item a:visited, .nav-header li a, .nav-header li a:visited { color: white; }
 

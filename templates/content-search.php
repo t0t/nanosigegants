@@ -18,9 +18,9 @@
 
             <? if ( has_post_thumbnail() ) { ?>
 
-            <figure class="post__figure ">
+            <figure class="post__figure">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php the_post_thumbnail('medium'); ?>
+                <?php the_post_thumbnail('mini', array( 'class' => 'img--noajust' )); ?>
                 </a>
             </figure>
 
