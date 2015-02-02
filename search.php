@@ -1,29 +1,15 @@
 <?php get_header(); ?>
 
-	<section>
+<main>
 
-		<main id="main" class="site-main" role="main">
+	
+	<!-- Content search -->
+	<?php get_template_part('templates/content', 'search'); ?>
+	
 
-		<?php if ( have_posts() ) : ?>
+</main>
 
-			<header>
-				<h1><?php get_search_query(); ?></h1>
-			</header>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part('templates/content', 'search'); ?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			ups no hay resultados
-		<?php endif; ?>
-
-		</main>
-	</section>
+<!-- Sidebars -->
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

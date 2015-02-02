@@ -1,19 +1,76 @@
-<?php
-/**
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- */
-?>
 
-<article>
+<div class="section-wrap">
 
-    <header>
-        <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-    </header>
+    <!-- Page Header -->
+    <?php //get_template_part('templates/page', 'header'); ?>
 
-    <div class="entry-summary">
-        <?php the_excerpt(); ?>
-    </div>
 
-</article>
+    <!-- Loop -->
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <h1><?php get_search_query(); ?></h1>
+
+
+        <?php the_date('j F Y'); ?>
+        <?php the_tags(); ?>
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+
+    <!-- Cargame los Custom fields, ACF -->
+    <?php //get_template_part('templates/custom-fields'); ?>
+
+    <?php endwhile; ?>
+    <?php else: ?>
+    <?php endif; ?>    
+
+
+    <!-- Navegacion -->
+    <nav class="nav--posts"> 
+
+        <ul>
+            <li>
+
+            <?php 
+                
+                $prevPost = get_previous_post();
+                
+                if($prevPost) 
+            {
+                $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'mini', array('class' => 'img--rounded') );
+
+                previous_post_link('%link', "$prevthumbnail &larr; %title"); 
+            } 
+            ?>
+            </li>
+
+
+             <!-- <li>
+
+                <a href="/blog/">
+                <i class="icon-house"></i> -->
+                <?php //$post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?>
+                <!-- </a>
+
+            </li> -->
+
+
+            <li>
+            
+            <?php
+
+                $nextPost = get_next_post();
+
+                if($nextPost) 
+            {
+                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--circle')); 
+
+                next_post_link('%link', "%title &rarr; $nextthumbnail"); 
+            }
+            ?>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>

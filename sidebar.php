@@ -11,6 +11,14 @@
         
         <?php get_sidebar('page'); ?>
 
+    <?php elseif ( is_search() ) : ?>
+        
+        <?php get_sidebar('single'); ?>
+
+    <?php elseif ( is_404() ) : ?>
+        
+        <?php get_sidebar('single'); ?>
+
     <?php //elseif ( is_page_template() ) : ?>
         <?php //get_sidebar('page-template.php'); ?>
 
