@@ -2,26 +2,50 @@
 <div class="section-wrap">
 
     <!-- Page Header -->
-    <?php //get_template_part('templates/page', 'header'); ?>
-
+    <?php get_template_part('templates/page', 'header'); ?>
+	
+	
+	<section class="grid">
 
     <!-- Loop -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h1><?php get_search_query(); ?></h1>
 
 
         <?php the_date('j F Y'); ?>
         <?php the_tags(); ?>
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		
+		<div class="post">
 
+            <? if ( has_post_thumbnail() ) { ?>
 
-    <!-- Cargame los Custom fields, ACF -->
-    <?php //get_template_part('templates/custom-fields'); ?>
+            <figure class="post__figure ">
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                <?php the_post_thumbnail('medium'); ?>
+                </a>
+            </figure>
+
+            <div class="post__content">
+
+                <small class="post__meta-date"><?php the_date('j F Y'); ?></small>
+                <h2><?php the_title(); ?></h2>
+                <a class="btn" href="<?php the_permalink(); ?>">&rarr;</a>
+
+            </div>
+
+            <?}else {?>  
+
+            <figure><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" class=""><figcaption><?php the_title(); ?></figcaption></a></figure>
+
+            <?}?>
+
+            </div>
+
 
     <?php endwhile; ?>
     <?php else: ?>
     <?php endif; ?>    
-
+	
+	</section>
 
     <!-- Navegacion -->
     <nav class="nav--posts"> 
