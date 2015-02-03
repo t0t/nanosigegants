@@ -9,7 +9,7 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 
-        <?php the_date('j F Y'); ?>
+    <small class="post__meta-date"><?php the_date('j F Y'); ?></small>
 
 
     <!-- Cargame los Custom fields, ACF -->
