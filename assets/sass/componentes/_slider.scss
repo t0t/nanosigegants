@@ -15,7 +15,7 @@
 	}
 
 	* {
-		transition: all .5s ease;
+		@include transition(.5s);
 	}
 
 	@media all and (min-width:450px) {}
@@ -25,12 +25,15 @@
 	//@include max-width(900px);
 	position: absolute;
 	top: 50px;
+	right: 0;
+	left: 0;
     opacity: 0;
     overflow: hidden;
     padding-bottom: 5px;
 	
 	@media all and (min-width: 780px) {
-		// width: 90%;
+		right: auto;
+		left: auto;
 	}
 
     &.current {
@@ -39,6 +42,7 @@
   }
 
 .slider__slides {
+
 	@media all and (min-width: 780px) {
 		
 		width: 50%;
