@@ -11,13 +11,13 @@
         
     <?php elseif ( is_search() ) : ?>
         
-    <h2>"<?php the_search_query() ?>"</h2>
+    <h1>"<?php the_search_query() ?>"</h1>
     <?php //echo esc_html( get_search_query( false ) ); ?>
 
 
     <?php elseif ( is_404() ) : ?>
         
-    <h2>Pagina no encontrada!</h2>
+    <h1>Pagina no encontrada!</h1>
 
 
     <?php else : ?>
