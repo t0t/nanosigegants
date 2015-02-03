@@ -10,7 +10,6 @@
 
 
         <?php the_date('j F Y'); ?>
-        <?php the_tags(); ?>
 
 
     <!-- Cargame los Custom fields, ACF -->

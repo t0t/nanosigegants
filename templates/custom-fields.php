@@ -91,7 +91,8 @@
     <?php endwhile;?>
 
 
-
+    <?php the_tags(); ?>
+    
     </section>
 
 
