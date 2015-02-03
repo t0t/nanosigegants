@@ -9,9 +9,6 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 
-    <small class="post__meta-date"><?php the_date('j F Y'); ?></small>
-
-
     <!-- Cargame los Custom fields, ACF -->
     <?php get_template_part('templates/custom-fields'); ?>
 

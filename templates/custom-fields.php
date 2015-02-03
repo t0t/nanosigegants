@@ -49,6 +49,8 @@
                     <?php if (get_sub_field("header")): ?>
                     <p><?php the_sub_field("header"); ?></p>
                     <?php endif ?>
+                    
+                    <small class="post__meta-date"><?php the_date('j F Y'); ?></small>
 
                     <?php the_sub_field("content"); ?>
                     <img src="<?php the_sub_field('image'); ?>" alt="">
