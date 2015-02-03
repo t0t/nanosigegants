@@ -235,7 +235,9 @@
         $loop = new WP_Query( array( 
             'post_type' => '',
             'category_name' => 'noticies',
-            'posts_per_page' => '3'
+            'posts_per_page' => '3',
+            'orderby' => 'date',
+            'order'   => 'DESC'
             )); 
     ?>
 
