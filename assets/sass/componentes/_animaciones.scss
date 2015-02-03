@@ -30,6 +30,116 @@
 }
 
 
+// Animacion logo intro
+
+.brand__logo {
+
+	path {
+	
+		&.anim-enano-izda {
+			
+			fill: $black;
+			@include animation(anim-nano-izda, .5s, .3s, linear, 4);
+
+		}
+
+		&.anim-enano-dcha {
+			
+			fill: $black;
+			@include animation(anim-nano-dcha, 0s, .3s, ease, 3);
+
+		}
+
+		&.anim-gegant {
+			
+			fill: $color-base;
+			@include animation(anim-gegant, 1s, .5s, ease, 2);
+
+		}
+
+		&.anim-puntitos {
+			
+			fill: $color-alt;
+			@include animation(anim-puntitos, 0s, 1s, ease, 2);
+
+		}
+
+		&.anim-agua {
+			
+			fill: $color-alt;
+			@include animation(anim-agua, 0s, .5s, linear, infinite);
+
+		}
+
+	}
+}
+
+@include keyframe(anim-nano-izda) {
+
+	0%, 100% {
+		
+		@include translate(0px, 0px);
+		
+	}
+
+	50% {
+
+		@include translate(0px, -5px);
+
+	}
+
+}
+
+@include keyframe(anim-nano-dcha) {
+
+    	
+	0%, 100% {
+		
+		@include translate(0px, 0px);
+		
+	}
+
+	50% {
+
+		@include translate(0px, -3px);
+
+	}
+
+}
+
+@include keyframe(anim-gegant) {
+
+	0%, 100% {
+		
+		@include translate(0px, 0px);
+		
+	}
+
+	50% {
+
+		@include translate(0px, -5px);
+
+	}
+
+}
+
+@include keyframe(anim-puntitos) {
+
+	0%, 100% {
+		
+		@include rotate(0deg);
+		
+	}
+
+	50% {
+
+		@include rotate(360deg);
+
+	}
+
+}
+
+
 
 // animacion intro fade
 @include keyframe(animacion--intro) {
@@ -39,6 +149,7 @@
 
 .efecto--intro {
   @include animation(animacion--intro, 1s, 1s, ease, 1);
+  @include animation(animacion--shake, 0s, 1s, ease, 1);
 }
 
 
