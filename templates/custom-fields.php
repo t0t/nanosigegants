@@ -91,8 +91,8 @@
     <?php endwhile;?>
 
 
-    <?php the_tags(); ?>
-    
+    <?php the_tags( 'Contingut relacionat: ', ' • ', '<br />' ); ?>
+
     </section>
 
 
