@@ -9,7 +9,22 @@
 
 	display: table;	
 	
-	@include max-width($bp3);
+	// @include max-width($bp3);
+
+	@media only screen and (min-width: 780px) {
+
+			width: calc(50% - #{$gutterwidth});
+			// background-color: red;
+
+    }
+
+    @media only screen and (min-width: 1120px) {
+
+			width: calc(33.33% - #{$gutterwidth});
+			// background-color: red;
+
+    }
+
 
 	@extend %margin-vertical;
 
@@ -49,7 +64,7 @@
 
 				margin-bottom: $gutterwidth;
 
-				color: $white-alpha-medio;
+				// color: $white-alpha-medio;
 
 
 				@media all and (min-width: $bp3) {
@@ -93,13 +108,16 @@
 
   .post--sidebar {
 
+	
 	@extend %text-center;
 
-		@media all and (min-width: $bp3) {
+		@media only screen and (min-width: $bp3)
+		and (orientation: landscape) {
 
 		    @include flexbox;
 		    @include flex-flow(row wrap);
-		    @include justify-content(space-around);
+		    @include justify-content(center);
+		    // @include align-content(center);
 
 	  	}
 
@@ -108,23 +126,27 @@
 
 	.post--sidebar__figure {
 
-		@media all and (min-width: $bp3) {
+
+    	@media only screen and (min-width: $bp3) {
 
 			width: calc(50% - #{$gutterwidth});
+			// background-color: red;
 
     	}
-
+		
 
 	    @media all and (min-width: 768px) {
 
 	    	width: calc(33% - #{$gutterwidth});
+			// background-color: red;
 
 	    }
 
 
-	    @media all and (min-width: 1280px) {
+	    @media all and (min-width: 900px) {
 
 	    	width: calc(20% - #{$gutterwidth});
+			// background-color: olive;
 
 	    }
 
