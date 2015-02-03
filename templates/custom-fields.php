@@ -237,7 +237,7 @@
             'category_name' => 'noticies',
             'posts_per_page' => '3',
             'orderby' => 'date',
-            'order'   => 'ASC'
+            'order'   => 'DESC'
             )); 
     ?>
 
