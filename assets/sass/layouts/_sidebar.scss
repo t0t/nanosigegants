@@ -3,12 +3,13 @@
 
 	* {
 		letter-spacing: $baseletterspacing;
+		@include transition(.3s);
 	}
 
 
 	a, a:visited {
 
-		color: $white-alpha-fuerte;
+		color: $black;
 
 		&:hover {
 			color: $white;

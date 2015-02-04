@@ -46,7 +46,7 @@
 
 		@extend %text-center;
 
-		background-color: $black;
+		background-color: $color-base-darken;
 
 		form {
 
@@ -89,8 +89,14 @@
 		input[type="reset"],
 		input[type="submit"] {
 			// border: 3px solid $black-alpha-fuerte;
-			background-color: $color-alt;
+			color: $white;
+			background-color: $black-alpha-fuerte;
 			width: 30%;
+
+			&:hover {
+				background-color: $black-alpha-medio;
+			}
+
 		}
 
 	}
@@ -292,7 +298,7 @@
 .video-main {
 	@extend %padding-vertical;
 	@extend %text-center;
-	background-color: $black;
+	background-color: $color-alt;
 
 }
 	.video-main__header {
