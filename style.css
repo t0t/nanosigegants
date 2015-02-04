@@ -263,7 +263,7 @@ article, aside, figure, footer, header, hgroup, nav, section { display: block; }
 
 .post--sidebar__meta-date { font-size: 24px; font-size: 1.2rem; color: rgba(255, 255, 255, 0.5); font-style: italic; line-height: 1; margin-bottom: 0; letter-spacing: 1px; }
 
-.slider { height: 500px; padding-top: 3%; position: relative; z-index: 1; background-color: #326171; margin-left: auto; margin-right: auto; max-width: 1420px; width: 100%; }
+.slider { height: 500px; padding-top: 3%; position: relative; z-index: 1; background-color: #8c4c35; margin-left: auto; margin-right: auto; max-width: 1420px; width: 100%; }
 .slider ul { margin: 0; padding: 0; }
 .slider * { -webkit-transition: all 0.5s; transition: all 0.5s; }
 

@@ -6,7 +6,7 @@
 	padding-top: $gutterwidth;
 	position: relative;
 	z-index: 1;
-	background-color: $color-alt;
+	background-color: $color-base;
 	@include max-width($bp1);
 
 	ul {
