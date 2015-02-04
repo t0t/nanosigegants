@@ -19,7 +19,9 @@
 
 	@include max-width($bp1);
 
-	background-color: darken($color-alt, 10%);
+	background-color: $color-base;
+	// background-color: darken($color-alt, 10%);
+	// background-color: lighten($color-base, 55%);
 
 	padding-top: $gutterwidth;
 

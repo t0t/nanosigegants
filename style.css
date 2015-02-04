@@ -248,7 +248,7 @@ article, aside, figure, footer, header, hgroup, nav, section { display: block; }
 
 .post__meta-date { font-size: 24px; font-size: 1.2rem; color: #326171; font-style: italic; line-height: 1; margin-bottom: 0; letter-spacing: 1px; }
 
-@media only screen and (min-width: 600px) and (orientation: landscape) { .post--sidebar { display: -moz-flex; /* OLD - Firefox 19 */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-flex-flow: row wrap; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; } }
+@media only screen and (min-width: 600px) and (orientation: landscape) { .post--sidebar { display: -moz-flex; /* OLD - Firefox 19 */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-flex-flow: row wrap; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; -webkit-box-align: baseline; -ms-flex-align: baseline; -webkit-align-items: baseline; -moz-align-items: baseline; align-items: baseline; } }
 
 @media only screen and (min-width: 600px) { .post--sidebar__figure { width: calc(50% - 3%); } }
 @media all and (min-width: 768px) { .post--sidebar__figure { width: calc(33% - 3%); } }
@@ -288,7 +288,7 @@ article, aside, figure, footer, header, hgroup, nav, section { display: block; }
 
 .slider__item__prev { left: 3%; }
 
-.sidebar { margin-left: auto; margin-right: auto; max-width: 1420px; width: 100%; background-color: #22434e; padding-top: 3%; }
+.sidebar { margin-left: auto; margin-right: auto; max-width: 1420px; width: 100%; background-color: #8c4c35; padding-top: 3%; }
 .sidebar * { letter-spacing: 1px; }
 .sidebar a, .sidebar a:visited { color: rgba(255, 255, 255, 0.8); }
 .sidebar a:hover, .sidebar a:visited:hover { color: white; }
@@ -828,14 +828,14 @@ Main navbar
 
 .widget--tags .tagcloud a { font-size: 2rem; }
 
-.widget--newsletter { margin-top: 1.5%; background-color: #326171; }
+.widget--newsletter { margin-top: 1.5%; background-color: black; }
 .widget--newsletter form { width: 100%; margin: 0; padding: 0; }
 @media screen and (min-width: 600px) { .widget--newsletter form { display: -moz-flex; /* OLD - Firefox 19 */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -ms-flex-pack: distribute; -webkit-justify-content: space-around; -moz-justify-content: space-around; justify-content: space-around; -webkit-box-align: baseline; -ms-flex-align: baseline; -webkit-align-items: baseline; -moz-align-items: baseline; align-items: baseline; } }
 .widget--newsletter h3 { padding-bottom: 1.5%; margin-right: 3%; }
 .widget--newsletter h3, .widget--newsletter label { color: white; margin-bottom: 0; }
-.widget--newsletter input[type="email"] { width: 50%; -webkit-box-flex: 2; -webkit-flex-grow: 2; -moz-flex-grow: 2; -ms-flex-positive: 2; flex-grow: 2; margin-right: 10px; }
+.widget--newsletter input[type="email"] { width: 50%; -webkit-box-flex: 2; -webkit-flex-grow: 2; -moz-flex-grow: 2; -ms-flex-positive: 2; flex-grow: 2; margin-right: 10px; background-color: rgba(255, 255, 255, 0.8); }
 .widget--newsletter input[type="email"]::-webkit-input-placeholder { font-size: inherit; color: gray; padding-left: 3%; }
-.widget--newsletter input[type="button"], .widget--newsletter input[type="reset"], .widget--newsletter input[type="submit"] { border: 3px solid rgba(0, 0, 0, 0.1); background-color: transparent; width: 30%; }
+.widget--newsletter input[type="button"], .widget--newsletter input[type="reset"], .widget--newsletter input[type="submit"] { background-color: #326171; width: 30%; }
 
 .idiomas { margin: 0.8em; display: table; display: none; width: 90px; float: right; padding: 8px 35px 8px 14px; line-height: 1; background-color: #714232; }
 .idiomas li { display: table-cell; font-size: 18px; font-size: 0.9rem; }

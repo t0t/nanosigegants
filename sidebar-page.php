@@ -2,7 +2,7 @@
 
 <div class="widget widget--pages">
 
-	<h3>més informació sobre La Colla</h3>
+	<h3>La Colla</h3>
 
 	<!-- http://www.billerickson.net/code/wp_query-arguments/ -->
 	<?php 
@@ -35,7 +35,7 @@
 
 		                <figcaption class="post--sidebar__content">
 
-		                	<?php the_title(); ?> &rarr;
+		                	<?php the_title(); ?>
 
 		                </figcaption>
 
