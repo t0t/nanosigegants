@@ -792,7 +792,7 @@ Main navbar
 .nav-barra a { -webkit-transition: all 0.4s; transition: all 0.4s; border-radius: 20px; padding: 5px 12px; }
 .nav-barra a:hover { background-color: #326171; }
 .nav-barra ul { padding-left: 0; }
-.nav-barra .current-menu-item a { background-color: #8c4c35; }
+.nav-barra .current-menu-item a { background-color: #326171; }
 
 .nav-main label { margin-bottom: 0; }
 .nav-main label::after { width: 2em; height: 2em; position: fixed; top: 12px; right: 12px; display: block; font-size: 2rem; content: "☰"; z-index: 25; line-height: 2.1; text-align: center; background-color: #326171; border-radius: 100%; color: white; }
