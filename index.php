@@ -4,6 +4,8 @@
 
         <section role="main">
 
+        ddddd
+
             <?php get_template_part('template', 'home'); ?>
 
         </section>

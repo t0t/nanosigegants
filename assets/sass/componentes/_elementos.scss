@@ -27,6 +27,33 @@ hr {
 	width: inherit;
 }
 
+// Iconos cargados mediante checkbox en acf
+.content-summary__img {
+
+	// width: 40px;
+	min-height: 210px;
+
+	&.ico_noticias {
+
+		@include background-image(ico_noticias,auto,no-repeat,svg);
+		background-position: center top;
+
+	}
+
+	&.ico_agenda {
+
+		@include background-image(ico_agenda,auto,no-repeat,svg);
+		background-position: center top;
+
+	}
+
+	&.ico_tienda {
+
+		@include background-image(ico_tienda,auto,no-repeat,svg);
+		background-position: center top;
+
+	}
+}
 
 
 

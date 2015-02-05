@@ -321,23 +321,23 @@ article, aside, figure, footer, header, hgroup, nav, section { display: block; }
 html { font-size: 75%; }
 @media all and (min-width: 600px) { html { font-size: 85%; } }
 
-body { font-family: "Almendra", serif; color: black; background-size: cover; background-image: url(assets/img/bg.svg); background-color: #f8efec; font-size: 1.5rem; }
+body { font-family: "Almendra", serif; color: black; background-size: auto; background-repeat: no-repeat; background-image: url(assets/img/bg.svg); background-color: #f6ece8; font-size: 1.5rem; }
 .no-svg body { background-image: url(assets/img/bg.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg body { background-image: url(assets/img/bg@2x.png); } }
 
 img { margin-left: auto; margin-right: auto; max-width: 100%; width: 100%; height: auto; }
 
-.img--bg { background-size: contain; background-image: url(assets/img/logoyo.png); background-repeat: no-repeat; background-position: center; background-color: #8c4c35; }
+.img--bg { background-size: contain; background-repeat: no-repeat; background-image: url(assets/img/logoyo.png); background-position: center; background-color: #8c4c35; }
 .no-svg .img--bg { background-image: url(assets/img/logoyo.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .img--bg { background-image: url(assets/img/logoyo@2x.png); } }
 
-.img--bg-big { background-size: cover; background-image: url(assets/img/image.jpg); background-repeat: no-repeat; background-position: center; background-color: #8c4c35; }
+.img--bg-big { background-size: cover; background-repeat: no-repeat; background-image: url(assets/img/image.jpg); background-position: center; background-color: #8c4c35; }
 .no-svg .img--bg-big { background-image: url(assets/img/image.png); }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .img--bg-big { background-image: url(assets/img/image@2x.png); } }
 
 .img--mascara { -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
 
-.main__content { margin-left: auto; margin-right: auto; max-width: 1420px; width: 100%; background-color: white; }
+.main__content { margin-left: auto; margin-right: auto; max-width: 1420px; width: 100%; }
 @media all and (min-width: 600px) { .main__content { padding: 3%; } }
 .main__content p:first-child { font-size: 40px; font-size: 2rem; font-style: italic; }
 
@@ -702,13 +702,24 @@ hr { clear: both; margin: 1.6em 0; padding: 0; height: 1px; border: 0; border-to
 
 .img--noajust { width: inherit; }
 
+.content-summary__img { min-height: 210px; }
+.content-summary__img.ico_noticias { background-size: auto; background-repeat: no-repeat; background-image: url(assets/img/ico_noticias.svg); background-position: center top; }
+.no-svg .content-summary__img.ico_noticias { background-image: url(assets/img/ico_noticias.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .content-summary__img.ico_noticias { background-image: url(assets/img/ico_noticias@2x.png); } }
+.content-summary__img.ico_agenda { background-size: auto; background-repeat: no-repeat; background-image: url(assets/img/ico_agenda.svg); background-position: center top; }
+.no-svg .content-summary__img.ico_agenda { background-image: url(assets/img/ico_agenda.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .content-summary__img.ico_agenda { background-image: url(assets/img/ico_agenda@2x.png); } }
+.content-summary__img.ico_tienda { background-size: auto; background-repeat: no-repeat; background-image: url(assets/img/ico_tienda.svg); background-position: center top; }
+.no-svg .content-summary__img.ico_tienda { background-image: url(assets/img/ico_tienda.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .content-summary__img.ico_tienda { background-image: url(assets/img/ico_tienda@2x.png); } }
+
 /*------------------------------------*\ $ELEMENTOS-FIGURE
 \*------------------------------------*/
 figure figcaption { font-style: italic; }
 
 /*------------------------------------*\ $TIPOGRAFÍA
 \*------------------------------------*/
-h1, h2, h3, h4, h5, h6 { margin: 0; font-family: "Almendra", serif; font-weight: 400; color: black; text-rendering: optimizelegibility; }
+h1, h2, h3, h4, h5, h6 { margin: 0; font-family: "Almendra", serif; font-weight: 400; color: #8c4c35; text-rendering: optimizelegibility; }
 h1.altheader, h2.altheader, h3.altheader, h4.altheader, h5.altheader, h6.altheader { font-size: 8vw; letter-spacing: 0; }
 
 h1 small, h2 small, h3 small { color: #7a422e; }

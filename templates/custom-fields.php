@@ -431,12 +431,26 @@
                 
             <div class="content-summary__item">
 
-                <?php
-                $image = get_sub_field('img');
-                echo '<img src="'.$image['sizes']['medium'].'" />';
-                ?>
-
                 <h3><?php the_sub_field('title'); ?></h3>
+
+                <?php if (get_sub_field("asocia_imagen")) { ?>
+
+                <div class="content-summary__img <?php the_sub_field('asocia_imagen'); ?>"></div>
+
+                <?php } else { ?>
+
+
+                <?php
+                //$image = get_sub_field('img');
+                //echo '<img src="'.$image['sizes']['medium'].'" />';
+                ?>
+                <!-- <img src="<?php //echo get_bloginfo('template_directory');?>/assets/img/logo.svg" alt="logo"> -->
+
+     
+                <?php } ?>
+
+
+
 
                 <p><?php the_sub_field('text'); ?></p>
 

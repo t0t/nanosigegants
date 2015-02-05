@@ -1,7 +1,8 @@
-@mixin background-image($name, $size:false, $svg:false, $jpg:false, $gif:false){
+@mixin background-image($name, $size:false, $repeat: false, $svg:false, $jpg:false, $gif:false){
 
     @if($size){
         background-size: $size;
+        background-repeat: $repeat;
     }
     @if($jpg){
         background-image:url(#{$image-path}#{$name}.#{$jpg});
