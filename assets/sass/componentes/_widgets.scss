@@ -46,7 +46,7 @@
 
 		@extend %text-center;
 
-		background-color: $color-base-darken;
+		background-color: $color-alt;
 
 		form {
 
@@ -90,7 +90,7 @@
 		input[type="submit"] {
 			// border: 3px solid $black-alpha-fuerte;
 			color: $white;
-			background-color: $black-alpha-fuerte;
+			background-color: $black;
 			width: 30%;
 
 			&:hover {

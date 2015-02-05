@@ -22,8 +22,8 @@ h6 {
 		
 		&.altheader {
 			// font-family: $google-font;
-			// color:$white;
-			font-size: 8vw;
+			color: $black;
+			// font-size: 8vw;
 			// font-weight: 700;
 			// text-transform: uppercase;
 			letter-spacing: 0;
@@ -34,7 +34,11 @@ h1 small,
 h2 small,
 h3 small {
 	@extend %display-block;
-	color : $color-base-dark;
+	@extend %padding-vertical;
+	color : $black;
+	@include font-size(36);
+	font-style: italic;
+	letter-spacing: $baseletterspacing;
 }
 
 @each $header, $margin-bot, $font-size, $line-height in 

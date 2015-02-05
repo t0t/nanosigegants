@@ -13,6 +13,7 @@
     
 
 
+
     <?php if( get_row_layout() == 'contact_form' ):?>
 
         <div class="grid">
@@ -34,6 +35,7 @@
 
 
 
+
         <?php elseif( get_row_layout() == '2_blocks' ):?>
 
 
@@ -43,16 +45,15 @@
             <?php if( have_rows('block')): ?>
         
             <?php while (have_rows('block')) : the_row(); ?>
-            
+            1 bloque
                 <div class="grid__item">
                 
                     <?php if (get_sub_field("header")): ?>
-                    <p><?php the_sub_field("header"); ?></p>
+                    <?php the_sub_field("header"); ?>xx
                     <?php endif ?>
                     
-                    <small class="post__meta-date"><?php the_date('j F Y'); ?></small>
-
                     <?php the_sub_field("content"); ?>
+
                     <img src="<?php the_sub_field('image'); ?>" alt="">
             
                 </div>
@@ -65,26 +66,77 @@
 
 
 
+
+
+
+
+
+
         <?php elseif( get_row_layout() == '1_block' ):?>
 
-            <div class="grid-content_wrap">
+            <!-- repeater -->
+            <?php if( have_rows('block')): ?>
+            <?php while (have_rows('block')) : the_row(); ?>
 
-                <!-- repeater -->
-                <?php if( have_rows('block')): ?>
-                <?php while (have_rows('block')) : the_row(); ?>
             
+            <div class="grid-content">
+
+            
+            <?php if (get_sub_field("header")): ?>
+
+                <h3><?php the_sub_field("header"); ?></h3>
+
+            <?php endif ?>
+
+
                 <div class="grid-content__item">
                 
-                <?php the_sub_field("header"); ?>
-                <?php the_sub_field("content"); ?>
-                <img src="<?php the_sub_field('image'); ?>" alt="">
+                <?php if (get_sub_field("header")): ?>
+
+                    <img src="<?php the_sub_field('image'); ?>" alt="">
             
+                <?php endif ?>
+
+                <!-- combinacion entre slikr flickr y acf pero no funciona -->
+                <?php if (get_sub_field("flickr_gallery")): ?>
+
+                    <a href="<?php the_sub_field('flickr_gallery'); ?>" target="_blank">Clica per vore l'album complert de fotos a flickr</a>
+                    <?php 
+                        //echo do_shortcode( get_sub_field( 'flickr_gallery' ) );
+                        //$album = get_sub_field("flickr_gallery");
+                        //echo do_shortcode( '[slickr-flickr  set="' . $album . '" size="large" type="gallery"]'); 
+                    ?>
+                    <?php 
+                        //echo do_shortcode('[slickr-flickr set=" ' . $album . ' " type="gallery"]');
+                        //[slickr-flickr set="72157650024401437" type="gallery"]
+                    ?>
+
+                <?php endif ?>
+                
                 </div>
+
+
+                <div class="grid-content__item">
+
+                    <?php if (get_sub_field("header")): ?>
+
+                        <?php the_sub_field("content"); ?>
+
+                    <?php endif ?>
+
+                </div>
+
+
+                    
+
+
+
+            </div>
+
 
             <?php endwhile;?>
             <?php endif ?>
 
-            </div>
             
         </div>
             

@@ -3,8 +3,7 @@
 	@include max-width($bp1);
 	@include align-content(center);
 	@include align-items(center);
-	// background-color: $black-alpha-fuerte;
-	background-color: $color-base-darken;
+	background-color: $color-base;
   	padding: $gutterwidth / 2;
 	
   	@media (min-width:$bp3) {
@@ -49,7 +48,7 @@
 		@include max-width($bp1);
 		@extend %text-center;
 		@extend %padding-vertical;
-		// background-color: $color-base;
+		background-color: $color-base;
 
 		aside {
 			// margin-top: $gutterwidth;

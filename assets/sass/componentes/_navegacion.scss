@@ -4,6 +4,11 @@ Main navbar
 
 //Navegacion general
 .nav-barra {
+  
+  @include max-width($bp1);
+  height: 70px;
+  @include background-image(bg_main_nav,initial,no-repeat,svg);
+    background-position: center bottom;
 
   a {
 
@@ -15,7 +20,7 @@ Main navbar
 
     &:hover {
 
-      background-color: $color-alt;
+      background-color: $black-alpha-medio;
 
     }
 
@@ -31,7 +36,7 @@ Main navbar
 
     a {
 
-      background-color: $color-alt;
+      background-color: $black;
 
     }
 
@@ -171,7 +176,7 @@ Main navbar
   min-height: 57px;
   margin: 0 auto;
   max-width: $bp1;
-  background-color: $black;
+  // background-color: $black;
   border-radius: $radius;
   display: none;
   
@@ -188,7 +193,7 @@ Main navbar
     display: table-cell;
     width: 12%;
     @extend %text-center; 
-    vertical-align: middle;
+    vertical-align: bottom;
     @extend %lowercase;
     font-size: 1.2rem;
     // font-weight: $baseheadingfontweight;

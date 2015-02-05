@@ -37,12 +37,25 @@ img {
 
 
 // LAYOUT
+
 .main__content {
+	
 	@include max-width($bp1);
     // background-color: $white;
     @media all and (min-width: $bp3) {
-    	padding: $gutterwidth;
+    	// padding: $gutterwidth;
     }
+
+	header:first-child {
+
+		h1 {
+			color: $background;
+		}
+
+		background-color: $color-base;
+		padding: (($gutterwidth) ($gutterwidth * 1.5));
+
+	}
 
 	p:first-child {
 		@include font-size(40);

@@ -2,8 +2,6 @@
 
 
 
-
-
 // Post
 .post {
 
@@ -111,8 +109,7 @@
 	
 	@extend %text-center;
 
-		@media only screen and (min-width: $bp3)
-		and (orientation: landscape) {
+		@media only screen and (min-width: $bp3) {
 
 		    @include flexbox;
 		    @include flex-flow(row wrap);
@@ -121,16 +118,22 @@
 
 	  	}
 
+	  	@media only and (orientation: landscape) {
+
+		    background-color: red;
+
+	  	}
+
 	}
 
 
 	.post--sidebar__figure {
 
+		@extend %margin-vertical;
 
     	@media only screen and (min-width: $bp3) {
 
 			width: calc(50% - #{$gutterwidth});
-			// background-color: red;
 
     	}
 		

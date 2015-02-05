@@ -2,12 +2,13 @@
 //Slider
 .slider {
 
+	@include max-width($bp1);
 	height: 500px;
 	padding-top: $gutterwidth;
 	position: relative;
 	z-index: 1;
-	background-color: $color-base;
-	@include max-width($bp1);
+	// background-color: $color-base;
+	@include background-image(bg_top_main,100%,no-repeat,svg);
 
 	ul {
 		margin: 0;
@@ -93,7 +94,7 @@
 	.slider__caption {
     	z-index: 10;
     	@extend %text-center;
-    	color: $white;
+    	color: $background;
     	font-size: 1.9rem;
     	line-height: 1.7;
 
