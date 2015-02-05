@@ -1,6 +1,9 @@
 
 .sidebar {
 
+	@include max-width($bp1);
+	
+
 	* {
 		letter-spacing: $baseletterspacing;
 		@include transition(.3s);
@@ -18,7 +21,6 @@
 	}
 
 
-	@include max-width($bp1);
 
 	background-color: $white;
 	// background-color: darken($color-alt, 10%);

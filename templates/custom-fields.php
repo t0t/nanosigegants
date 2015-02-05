@@ -84,7 +84,7 @@
             
             <?php if (get_sub_field("header")): ?>
 
-                <h3><?php the_sub_field("header"); ?></h3>
+                <?php the_sub_field("header"); ?>
 
             <?php endif ?>
 
@@ -118,17 +118,15 @@
 
                 <div class="grid-content__item">
 
-                    <?php if (get_sub_field("header")): ?>
+                    <?php if (get_sub_field("content")): ?>
 
                         <?php the_sub_field("content"); ?>
 
                     <?php endif ?>
 
+                    <?php the_tags( 'Contingut relacionat: ', ' • ', '<br />' ); ?>
+
                 </div>
-
-
-                    
-
 
 
             </div>
@@ -145,7 +143,7 @@
     <?php endwhile;?>
 
 
-    <?php the_tags( 'Contingut relacionat: ', ' • ', '<br />' ); ?>
+    
 
     </section>
 

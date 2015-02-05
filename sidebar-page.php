@@ -10,9 +10,9 @@
 
     $loop = new WP_Query( array( 
     	'post_type' => 'page',
-    	'posts_per_page' => '5',
+    	'posts_per_page' => '',
     	'posts_per_archive_page' => 10,
-    	'post__in' => array( 14, 212, 18, 16, 286, 20 ),
+    	'post__in' => array( 14, 212, 18, 16, 286, 20, 1423 ),
     	'post__not_in' => array($this_post),
     	'orderby' => 'date',
     	'order' => 'DESC',

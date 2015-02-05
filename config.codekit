@@ -2199,6 +2199,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/ico_homenassos.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16316,
+		"inputAbbreviatedPath": "\/assets\/img\/ico_homenassos.png",
+		"outputAbbreviatedPath": "\/assets\/img\/ico_homenassos.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/ico_noticias.png": {
 		"fileType": 32768,
 		"ignore": 0,

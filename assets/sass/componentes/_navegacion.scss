@@ -207,10 +207,21 @@ Main navbar
 
 // Navegacion
 .nav--posts {
+  @include max-width($bp1);
 
   ul {
+    display: table;
     margin: 0;
     padding: 0;
+    width: 100%;
+    @include padding($gutterwidth); 
+
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      width: 50%;
+      text-align: center;
+    }
   }
 
   img {

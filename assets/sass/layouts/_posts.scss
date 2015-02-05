@@ -135,21 +135,20 @@
 
 			width: calc(50% - #{$gutterwidth});
 
+
     	}
 		
 
 	    @media all and (min-width: 768px) {
 
 	    	width: calc(33% - #{$gutterwidth});
-			// background-color: red;
 
 	    }
 
 
 	    @media all and (min-width: 900px) {
 
-	    	width: calc(20% - #{$gutterwidth});
-			// background-color: olive;
+	    	width: calc(15% - #{$gutterwidth});
 
 	    }
 

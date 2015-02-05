@@ -253,7 +253,7 @@ article, aside, figure, footer, header, hgroup, nav, section { display: block; }
 
 @media only screen and (min-width: 600px) { .post--sidebar__figure { width: calc(50% - 3%); } }
 @media all and (min-width: 768px) { .post--sidebar__figure { width: calc(33% - 3%); } }
-@media all and (min-width: 900px) { .post--sidebar__figure { width: calc(20% - 3%); } }
+@media all and (min-width: 900px) { .post--sidebar__figure { width: calc(15% - 3%); } }
 .post--sidebar__figure img { filter: grayscale(1); -webkit-filter: grayscale(1); -moz-filter: grayscale(1); -o-filter: grayscale(1); -ms-filter: grayscale(1); }
 @media all and (min-width: 600px) { .post--sidebar__figure img { width: calc(50% - 3%); } }
 @media all and (min-width: 768px) { .post--sidebar__figure img { width: calc(33% - 3%); } }
@@ -341,7 +341,7 @@ img { margin-left: auto; margin-right: auto; max-width: 100%; width: 100%; heigh
 .img--mascara { -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
 
 .main__content { margin-left: auto; margin-right: auto; max-width: 1440px; width: 100%; }
-.main__content header:first-child { background-color: #8c4c35; padding: 3% 4.5%; }
+.main__content header:first-child { padding: 3% 4.5%; margin-bottom: 3%; background-color: #8c4c35; }
 .main__content header:first-child h1 { color: #f6ece8; }
 .main__content p:first-child { font-size: 40px; font-size: 2rem; font-style: italic; }
 
@@ -837,7 +837,9 @@ Main navbar
 .nav-header .nav-header__item, .nav-header li { display: table-cell; width: 12%; vertical-align: bottom; font-size: 1.2rem; }
 .nav-header .nav-header__item a, .nav-header .nav-header__item a:visited, .nav-header li a, .nav-header li a:visited { color: white; }
 
-.nav--posts ul { margin: 0; padding: 0; }
+.nav--posts { margin-left: auto; margin-right: auto; max-width: 1440px; width: 100%; }
+.nav--posts ul { display: table; margin: 0; padding: 0; width: 100%; padding: 3%; }
+.nav--posts ul li { display: table-cell; vertical-align: middle; width: 50%; text-align: center; }
 .nav--posts img { width: 75px; }
 
 /*------------------------------------*\ $WIDGETS
@@ -898,7 +900,7 @@ Main navbar
 @media all and (min-width: 850px) { .content-summary__item { width: 33%; } }
 @media only screen and (orientation: landscape) and (max-width: 850px) { .content-summary__item { width: 33%; } }
 
-.video-main { background-color: #326171; }
+.video-main { background-color: black; }
 
 .video-main__header { color: white; margin-bottom: 3%; }
 
