@@ -4,11 +4,6 @@ Main navbar
 
 //Navegacion general
 .nav-barra {
-  
-  @include max-width($bp1);
-  height: 70px;
-  @include background-image(bg_main_nav,initial,no-repeat,svg);
-    background-position: center bottom;
 
   a {
 
@@ -171,13 +166,11 @@ Main navbar
 
 // Nav Header
 .nav-header {
-
-  @extend %full-width;
-  min-height: 57px;
+  
+  @include max-width($bp1);
+  height: 62px;
+  @include background-image(bg_main_nav,initial,no-repeat,svg);
   margin: 0 auto;
-  max-width: $bp1;
-  // background-color: $black;
-  border-radius: $radius;
   display: none;
   
   @media all and (min-width: 780px) {

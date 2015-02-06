@@ -169,8 +169,6 @@ td, th { padding: 0; }
 
 .aligncenter, hr, figure figcaption, h1 small, h2 small, h3 small { display: block; }
 
-.nav-header { width: 100%; }
-
 .post--sidebar, .slider__figure, .slider__figure .slider__caption, .main-footer__credits, .main-footer__brand, .main-footer__searchform, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .nav-header .nav-header__item, .nav-header li, .widget--newsletter, .idiomas, .alert--info, .well, .well--large, .content-summary__item, .video-main, .tienda__item, .galeria-fotos__figure, .galeria-fotos__figure .galeria-fotos__caption::after { text-align: center; }
 
 .post__content h2 { text-align: left; }
@@ -804,9 +802,6 @@ sub { bottom: -2.25em; }
 /*********************
 Main navbar
 **********************/
-.nav-barra { margin-left: auto; margin-right: auto; max-width: 1440px; width: 100%; height: 70px; background-size: initial; background-repeat: no-repeat; background-image: url(assets/img/bg_main_nav.svg); background-position: center bottom; }
-.no-svg .nav-barra { background-image: url(assets/img/bg_main_nav.png); }
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .nav-barra { background-image: url(assets/img/bg_main_nav@2x.png); } }
 .nav-barra a { -webkit-transition: all 0.4s; transition: all 0.4s; border-radius: 20px; padding: 5px 12px; }
 .nav-barra a:hover { background-color: rgba(0, 0, 0, 0.5); }
 .nav-barra ul { padding-left: 0; }
@@ -831,7 +826,9 @@ Main navbar
 .nav-footer__item { display: table-row; border-bottom: 10px solid white; }
 .nav-footer__item:last-child { border-bottom: none; }
 
-.nav-header { min-height: 57px; margin: 0 auto; max-width: 1440px; border-radius: 5px; display: none; }
+.nav-header { margin-left: auto; margin-right: auto; max-width: 1440px; width: 100%; height: 62px; background-size: initial; background-repeat: no-repeat; background-image: url(assets/img/bg_main_nav.svg); margin: 0 auto; display: none; }
+.no-svg .nav-header { background-image: url(assets/img/bg_main_nav.png); }
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .no-svg .nav-header { background-image: url(assets/img/bg_main_nav@2x.png); } }
 @media all and (min-width: 780px) { .nav-header { display: table; } }
 .nav-header li ul { display: none; }
 .nav-header .nav-header__item, .nav-header li { display: table-cell; width: 12%; vertical-align: bottom; font-size: 1.2rem; }
