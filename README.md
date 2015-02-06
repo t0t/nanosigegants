@@ -1,7 +1,7 @@
-Style guide ToT
+t0theme v3
 ==============================
 
-A starting point for crafting living style guides. Scalable and Modular Architecture for CSS. Style guides/Patterns + wireframings = website.
+A Wordpress theme.
 
 ` Work in progress... `
 
@@ -14,8 +14,10 @@ It is a sort of .kit (Codekit) includes that compiles into an index.html.
 		<!-- @include component.kit -->
 	</body>
 
-### Sass
-* BEM Methodology (Block, Element, Modifier)
+### Features
+* Sass => BEM Methodology (Block, Element, Modifier)
+* Responsive
+* Backoffice with client in mind, customized with ACF.
 
 ## Thanks to
 * [Wakkos-CSS-Framework](https://github.com/Wakkos/Wakkos-CSS-Framework/)
