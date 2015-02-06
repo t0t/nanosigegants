@@ -339,7 +339,7 @@ img { margin-left: auto; margin-right: auto; max-width: 100%; width: 100%; heigh
 .img--mascara { -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
 
 .main__content { margin-left: auto; margin-right: auto; max-width: 1440px; width: 100%; }
-.main__content header:first-child { padding: 3% 4.5%; margin-bottom: 3%; background-color: #8c4c35; }
+.main__content header:first-child { padding: 3% 4.5%; background-color: #8c4c35; }
 .main__content header:first-child h1 { color: #f6ece8; }
 .main__content p:first-child { font-size: 40px; font-size: 2rem; font-style: italic; }
 

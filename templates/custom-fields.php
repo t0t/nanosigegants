@@ -82,14 +82,10 @@
             <div class="grid-content">
 
             
-            <?php if (get_sub_field("header")): ?>
-
-                <?php the_sub_field("header"); ?>
-
-            <?php endif ?>
+            
 
 
-                <div class="grid-content__item">
+                <figure>
                 
                 <?php if (get_sub_field("header")): ?>
 
@@ -100,7 +96,8 @@
                 <!-- combinacion entre slikr flickr y acf pero no funciona -->
                 <?php if (get_sub_field("flickr_gallery")): ?>
 
-                    <a href="<?php the_sub_field('flickr_gallery'); ?>" target="_blank">Clica per vore l'album complert de fotos a flickr</a>
+                    <figcaption><a href="<?php the_sub_field('flickr_gallery'); ?>" target="_blank">Clica per vore l'album complert de fotos a flickr</a></figcaption>
+
                     <?php 
                         //echo do_shortcode( get_sub_field( 'flickr_gallery' ) );
                         //$album = get_sub_field("flickr_gallery");
@@ -113,7 +110,13 @@
 
                 <?php endif ?>
                 
-                </div>
+                </figure>
+
+                <?php if (get_sub_field("header")): ?>
+
+                    <h3><?php the_sub_field("header"); ?></h3>
+
+                <?php endif ?>
 
 
                 <div class="grid-content__item">
