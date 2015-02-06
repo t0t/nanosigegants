@@ -66,15 +66,12 @@
 
 	img {
 		
-		width: 250px;
-		height: 250px; //cambiar en wp thumbnail
 		border-radius: 100%;
 		margin: 0;
 
 		@media all and (min-width: 780px) {
-			width: 350px;
-			height: auto;
 			border-radius: $radius;
+			width: inherit;
 		}
 	}
 	

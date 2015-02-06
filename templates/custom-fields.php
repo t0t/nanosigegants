@@ -305,7 +305,7 @@
         <? if ( has_post_thumbnail() ) { ?>
 
                 <figure class="slider__figure">
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php the_post_thumbnail('thumbnail'); ?>
                     <figcaption class="slider__caption">
 
                     <small class="slider__meta-date"><?php the_date('j F Y'); ?></small>

@@ -3,6 +3,8 @@
 *.sketch
 *.json
 *.sass-cache
+*.sql
+*.rar
 .htaccess
 sitemap.xml
 sitemap.xml.gz
