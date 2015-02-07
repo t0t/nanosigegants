@@ -21,9 +21,14 @@
 		@include transition(.5s);
 	}
 
-	@media all and (max-width:$bp3) {
+	@media all and (max-width:$bp2) {
 		
 		background-color: $color-base;
+
+	}
+
+	@media all and (min-width:$bp3) {
+		
 
 	}
 
@@ -73,7 +78,6 @@
 
 .slider__figure {
 
-	position: relative;
 	@extend %text-center;
 	
 	@media all and (min-width: 780px) {
@@ -93,7 +97,6 @@
 
 		@media all and (min-width: 780px) {
 			border-radius: $radius;
-			width: inherit;
 		}
 	}
 	
@@ -165,13 +168,14 @@
 
 .slider__btn-call {
 	
-	width: 50%;
+	width: 180px;
+	height: 40px;
 	display: block;
 	margin: ($gutterwidth*2) auto;
 	border-radius: $radius*10;
 	@include font-size(24);
-	line-height: 1;
-	@include padding;
+	line-height: $baselineheight*1.5;
+	// @include padding;
 	// background-color: red;
 
 
