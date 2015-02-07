@@ -59,8 +59,14 @@ img {
 	}
 
 	p:first-child {
-		@include font-size(40);
-		font-style: italic;
+		
+		&::first-letter {
+		
+			color: $color-base;
+			@include font-size(100);
+
+		}
+		
 	}
 }
 

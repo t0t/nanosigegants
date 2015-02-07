@@ -22,6 +22,10 @@
 		position: relative;
 		@extend %text-center;
 		margin-bottom: $gutterwidth*2;
+		
+		img {
+			width: inherit;
+		}
 
     	//magia!!
     	@media (min-width: $bp3) {
@@ -35,24 +39,19 @@
 	    	font-size: 1rem;
 
 			&::after {
-			width: 2em;
-			height: 2em;
-			transition: all .7s;
+
 			content: "+" !important;
 			position: absolute;        
-			transform: translate(-40px, -70px);
 			font-size: 12px; 
 			font-size: 2rem;
-			background-color: $white;
 			line-height: 2em;
+
 		    @extend %text-center;
 		    border-radius: 100%;
 			}
 			
 			&:hover::after {
 				content: ">" !important;
-				transform: translate(-15px, -20px);
-				background-color: $color-base;
 			}
 		}
 	}

@@ -1,3 +1,8 @@
+// Padding todo
+@mixin padding($padding: $gutterwidth) {
+  padding: $padding ($gutterwidth - 1);
+}
+
 // Padding arriba y abajo
 @mixin padding-vertical($padding: $gutterwidth) {
   padding: $padding 0;

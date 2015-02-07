@@ -79,7 +79,7 @@
             <?php while (have_rows('block')) : the_row(); ?>
 
             
-            <div class="grid-content">
+            <div class="main-post grid-content">
 
             
             
@@ -114,12 +114,12 @@
 
                 <?php if (get_sub_field("header")): ?>
 
-                    <h3><?php the_sub_field("header"); ?></h3>
+                    <h3 class="main-post__subheader"><?php the_sub_field("header"); ?></h3>
 
                 <?php endif ?>
 
 
-                <div class="grid-content__item">
+                <div class="main-post__content">
 
                     <?php if (get_sub_field("content")): ?>
 
@@ -217,8 +217,6 @@
 
     <?php elseif(get_row_layout() == "gallery"): // Layout Gallery ?>
 
-    <section class="main__content">
-    
         <div class="galeria-fotos">
 
             <?php if (get_sub_field("title")): ?>
@@ -238,19 +236,26 @@
             if( $images ): ?>
                 
                 <?php foreach( $images as $image ): ?>
+
                     <figure class="galeria-fotos__figure">
+
                         <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                        <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
-                        <figcaption class="galeria-fotos__caption"><?php echo $image['caption']; ?></figcaption></a>
-                        </figure>
+
+                        <img src="<?php echo $image['sizes']['mini']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
+
+                        <figcaption class="galeria-fotos__caption">
+                        <?php echo $image['caption']; ?></figcaption>
+
+                        </a>
+                    
+                    </figure>
+                
                 <?php endforeach; ?>
                 
             <?php endif; ?>
 
         </div>
         
-    </section>
-
 
 
     <?php elseif(get_row_layout() == "video"): // Layout Videos ?>

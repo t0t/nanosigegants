@@ -13,7 +13,7 @@
     $this_post = $post->ID;
     $loop = new WP_Query( array( 
     'post_type' => '',
-    'posts_per_page' => '6',
+    'posts_per_page' => '9',
     'post__not_in' => array($this_post),
     'category_name' => 'noticies') ); 
     ?>
