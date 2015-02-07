@@ -171,6 +171,8 @@ td, th { padding: 0; }
 
 .post--sidebar, .slider__slides, .slider__figure, .slider__caption, .main-footer__credits, .main-footer__brand, .main-footer__searchform, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .nav-header .nav-header__item, .nav-header li, .widget--newsletter, .idiomas, .alert--info, .well, .well--large, .content-summary__item, .video-main, .tienda__item, .galeria-fotos { text-align: center; }
 
+h1.altheader, h2.altheader, h3.altheader, h4.altheader, h5.altheader, h6.altheader { text-align: right; }
+
 .post__content h2 { text-align: left; }
 
 .list-inline > li { display: inline-block; padding-right: 3%; }

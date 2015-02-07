@@ -21,24 +21,26 @@ h6 {
 	text-rendering 	: optimizelegibility;
 		
 		&.altheader {
+
 			// font-family: $google-font;
 			color: $black;
-			// font-size: 8vw;
-			// font-weight: 700;
-			// text-transform: uppercase;
+			@extend %text-right;
 			letter-spacing: 0;
+
 		}
 }
 
 h1 small,
 h2 small,
 h3 small {
+
 	@extend %display-block;
 	// @extend %padding-vertical;
 	color : $black;
 	@include font-size(36);
 	font-style: italic;
 	letter-spacing: $baseletterspacing;
+
 }
 
 @each $header, $margin-bot, $font-size, $line-height in 
