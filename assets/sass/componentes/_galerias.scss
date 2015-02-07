@@ -3,7 +3,14 @@
 	@include flexbox;
 	@include flex-wrap(wrap);
     @include justify-content(space-around);
-    @extend %basepadding;
+    // @extend %basepadding;
+
+    @media (min-width: $bp3) {
+      	
+      	width: calc(35% - #{$gutterwidth});
+
+    }
+
 }
 
 	.galeria-fotos__title {

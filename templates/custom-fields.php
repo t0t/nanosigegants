@@ -1,16 +1,12 @@
 
 
-
-
-
-
 <!-- Bloques -->
 <?php if( have_rows('layout_content') ): ?>
-
-    <section>
-
-    <?php while ( have_rows('layout_content') ) : the_row();?>
+<?php while ( have_rows('layout_content') ) : the_row();?>
     
+
+
+
 
 
 
@@ -38,14 +34,12 @@
 
         <?php elseif( get_row_layout() == '2_blocks' ):?>
 
-
         <div class="grid">
 
             <!-- repeater -->
             <?php if( have_rows('block')): ?>
-        
             <?php while (have_rows('block')) : the_row(); ?>
-            1 bloque
+
                 <div class="grid__item">
                 
                     <?php if (get_sub_field("header")): ?>
@@ -58,20 +52,14 @@
             
                 </div>
 
-
-
             <?php endwhile;?>
-
             <?php endif ?>
 
 
 
 
 
-
-
-
-
+        <!-- 1 bloque -->
         <?php elseif( get_row_layout() == '1_block' ):?>
 
             <!-- repeater -->
@@ -79,7 +67,7 @@
             <?php while (have_rows('block')) : the_row(); ?>
 
             
-            <div class="main-post grid-content">
+            <!-- <div class="main-post grid-content"> -->
 
             
             
@@ -119,40 +107,142 @@
                 <?php endif ?>
 
 
+                <!-- main post content -->
                 <div class="main-post__content">
 
-                    <?php if (get_sub_field("content")): ?>
 
+                   <article class="main-post__content__entry">
+
+                   <?php if (get_sub_field("content")): ?>
+                   
                         <?php the_sub_field("content"); ?>
-
+                   
                     <?php endif ?>
-
+                   
                     <?php the_tags( 'Contingut relacionat: ', ' • ', '<br />' ); ?>
 
+                    </article>
+
+
+                    <!-- galeria de fotos -->
+                    <div class="galeria-fotos">
+
+                         <h2 class="galeria-fotos__title">Galeria de fotos</h2>
+
+                        <?php if (get_sub_field("description")): ?>
+
+                            <h3 class="galeria-fotos__description">
+                                <?php the_sub_field("description"); ?>
+                            </h3>
+
+                        <?php endif ?>
+
+                        <div class="galeria-fotos">
+                            
+                            <?php
+                            $images = get_sub_field('gallery');
+                                 
+                            if( $images ): ?>
+                                
+                                <?php foreach( $images as $image ): ?>
+
+                                    <figure class="galeria-fotos__figure">
+
+                                        <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+
+                                        <img src="<?php echo $image['sizes']['mini']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
+
+                                        <figcaption class="galeria-fotos__caption">
+                                        <?php echo $image['caption']; ?></figcaption>
+
+                                        </a>
+                                    
+                                    </figure>
+                                
+                                <?php endforeach; ?>
+                                
+                            <?php endif; ?>
+
+                        </div>
+
+                    </div>
+                    <!-- /galeria de fotos -->
+
+
+            
                 </div>
-
-
-            </div>
+                <!-- /main post content -->
 
 
             <?php endwhile;?>
             <?php endif ?>
 
             
-        </div>
+        <!-- </div> -->
+
+
+
             
+        <?php elseif(get_row_layout() == "gallery"): // Layout Gallery ?>
+
+        <!-- galeria de fotos -->
+        <div class="galeria-fotos">
+
+             <h2 class="galeria-fotos__title">Galeria de fotos</h2>
+
+            <?php if (get_sub_field("description")): ?>
+
+                <h3 class="galeria-fotos__description">
+                    <?php the_sub_field("description"); ?>
+                </h3>
+
+            <?php endif ?>
+
+            <div class="galeria-fotos">
+                
+                <?php
+                $images = get_sub_field('gallery');
+                     
+                if( $images ): ?>
+                    
+                    <?php foreach( $images as $image ): ?>
+
+                        <figure class="galeria-fotos__figure">
+
+                            <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+
+                            <img src="<?php echo $image['sizes']['mini']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
+
+                            <figcaption class="galeria-fotos__caption">
+                            <?php echo $image['caption']; ?></figcaption>
+
+                            </a>
+                        
+                        </figure>
+                    
+                    <?php endforeach; ?>
+                    
+                <?php endif; ?>
+
+            </div>
+
+        </div>
+
+
+
+
+
 
         <?php endif;?>
-    <?php endwhile;?>
+        <?php endwhile;?>
+        <!-- /row layout -->
 
 
-    
-
-    </section>
 
 
 <?php else :?>
 <?php endif;?>
+<!-- /bloques -->
     
 
 
@@ -217,24 +307,17 @@
 
     <?php elseif(get_row_layout() == "gallery"): // Layout Gallery ?>
 
-        <h2 class="galeria-fotos__description">
-            
-            <?php the_sub_field("description"); ?>
-        
-        </h2>
+            <h2 class="galeria-fotos__title">Galeria de fotos</h2>
 
-        <div class="galeria-fotos">
-            <?php if (get_sub_field("title")): ?>
+            <?php if (get_sub_field("description")): ?>
 
-                <h2 class="galeria-fotos__title">
-                    <?php the_sub_field("title"); ?>xx
-                </h2>
                 <h3 class="galeria-fotos__description">
                     <?php the_sub_field("description"); ?>
                 </h3>
 
             <?php endif ?>
 
+        <div class="galeria-fotos">
             
             <?php
             $images = get_sub_field('gallery');
