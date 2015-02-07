@@ -81,24 +81,8 @@
             
                 <?php endif ?>
 
-                <!-- combinacion entre slikr flickr y acf pero no funciona -->
-                <?php if (get_sub_field("flickr_gallery")): ?>
-
-                    <figcaption><a href="<?php the_sub_field('flickr_gallery'); ?>" target="_blank">Clica per vore l'album complert de fotos a flickr</a></figcaption>
-
-                    <?php 
-                        //echo do_shortcode( get_sub_field( 'flickr_gallery' ) );
-                        //$album = get_sub_field("flickr_gallery");
-                        //echo do_shortcode( '[slickr-flickr  set="' . $album . '" size="large" type="gallery"]'); 
-                    ?>
-                    <?php 
-                        //echo do_shortcode('[slickr-flickr set=" ' . $album . ' " type="gallery"]');
-                        //[slickr-flickr set="72157650024401437" type="gallery"]
-                    ?>
-
-                <?php endif ?>
-                
                 </figure>
+
 
                 <?php if (get_sub_field("header")): ?>
 
@@ -127,7 +111,12 @@
                     <!-- galeria -->
                     <div class="galeria">
 
-                         <h2 class="galeria-fotos__title">Galeria de fotos</h2>
+
+                        <?php if (get_sub_field("gallery")): ?>
+
+                            <h4 class="galeria__title">Galeria de fotos</h4>
+
+                        <?php endif ?>
 
                         <?php if (get_sub_field("description")): ?>
 
@@ -136,6 +125,7 @@
                             </h3>
 
                         <?php endif ?>
+
 
                         <div class="galeria-fotos">
                             
@@ -164,6 +154,22 @@
                             <?php endif; ?>
 
                         </div>
+
+                        <?php if (get_sub_field("flickr_gallery")): ?>
+
+                            <small><a href="<?php the_sub_field('flickr_gallery'); ?>" target="_blank">Vols vore l'album complert a flickr?</a></small>
+
+                            <?php 
+                                //echo do_shortcode( get_sub_field( 'flickr_gallery' ) );
+                                //$album = get_sub_field("flickr_gallery");
+                                //echo do_shortcode( '[slickr-flickr  set="' . $album . '" size="large" type="gallery"]'); 
+                            ?>
+                            <?php 
+                                //echo do_shortcode('[slickr-flickr set=" ' . $album . ' " type="gallery"]');
+                                //[slickr-flickr set="72157650024401437" type="gallery"]
+                            ?>
+
+                        <?php endif ?>
 
                     </div>
                     <!-- /galeria -->
