@@ -124,8 +124,8 @@
                     </article>
 
 
-                    <!-- galeria de fotos -->
-                    <div class="galeria-fotos">
+                    <!-- galeria -->
+                    <div class="galeria">
 
                          <h2 class="galeria-fotos__title">Galeria de fotos</h2>
 
@@ -166,7 +166,7 @@
                         </div>
 
                     </div>
-                    <!-- /galeria de fotos -->
+                    <!-- /galeria -->
 
 
             
