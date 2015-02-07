@@ -36,7 +36,6 @@
 
   .slider__item {
 
-	//@include max-width(900px);
 	position: absolute;
 	top: 50px;
 	right: 0;
@@ -48,8 +47,11 @@
 
 	@media all and (min-width: 780px) {
 
-		right: auto;
-		left: auto;
+		// @include max-width(900px);
+		// right: auto;
+		// left: auto;
+		// background-color: red;
+		// width: 90%;
 	
 	}
 
@@ -65,9 +67,15 @@
 .slider__slides {
 	
 	@extend %text-center;
+
 	@media all and (min-width: 780px) {
+
+		@include flexbox;
+		// @include align-content(center); //alineado horizontal
+		// @include align-items(center); //alineado vertical
+		@include justify-content(center); //alineado vertical
+		// width: 100%;
 		
-		width: 50%;
 		margin: 0 auto;
 		// border: 1px dotted $black-alpha-suave;
 
@@ -83,7 +91,7 @@
 	@media all and (min-width: 780px) {
 
 		@include flexbox;
-		@include align-content(center); //alineado horizontal
+		@include justify-content(center); //alineado horizontal
 		@include align-items(center); //alineado vertical
 		width: 100%;
 
@@ -96,9 +104,20 @@
 		margin: 0;
 
 		@media all and (min-width: 780px) {
-			border-radius: $radius;
+
+			// border-radius: $radius;
+
 		}
+
+		@media all and (min-width: 900px) {
+
+			// width: 250px;
+
+		}
+
 	}
+
+}
 	
 	.slider__meta-date {
 
@@ -110,38 +129,40 @@
 
 	}
 	
+
 	.slider__title {
+
 		@extend %clearfix;
+
 	}
 	
+
 	.slider__caption {
+
     	z-index: 10;
     	@extend %text-center;
     	color: $background;
     	font-size: 1.9rem;
 
-		@media all and (min-width: 780px) {
+			@media all and (min-width: 780px) {
 
-			width: 30%;
+				width: 250px;
 
-		}
+			}
 
 
-		@media all and (min-width: 1280px) {
+			@media all and (min-width: 1280px) {
 
-    		font-size: 3.3rem;
-    		line-height: 1.2;
-    		width: 50%;
-    		margin-left: $gutterwidth;
+	    		width: 440px;
 
-		}
+	    		font-size: 3.3rem;
 
-		&:hover {
-			// opacity: 1;
-	    	// background-color: transparentize($color-alt, .2);
-	    }
+	    		line-height: 1.2;
+
+	    		// margin-left: $gutterwidth;
+
+			}
 	}
-}
 
 
 .slider__btn {
@@ -153,16 +174,23 @@
 	border: 1px dotted $white;
 	
 	&:hover {
+
 		background-color: $black-alpha-fuerte;
+
 	}
 	
 	&:visited {
+
 		color: $white;
+
 	}
 
 	&:focus {
+
 		outline: none;
+
 	}
+
 }
 
 
@@ -171,13 +199,10 @@
 	width: 180px;
 	height: 40px;
 	display: block;
-	margin: ($gutterwidth*2) auto;
+	margin: $paddingbase auto;
 	border-radius: $radius*10;
 	@include font-size(24);
 	line-height: $baselineheight*1.5;
-	// @include padding;
-	// background-color: red;
-
 
 	&:hover {
 
@@ -185,6 +210,13 @@
 		border: none;
 
 	}
+
+
+		@media all and (min-width: $bp3) {
+
+    		// display: inline;
+
+		}
 	
 }
 
