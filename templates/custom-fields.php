@@ -407,24 +407,34 @@
 
         <? if ( has_post_thumbnail() ) { ?>
 
-                <figure class="slider__figure">
-                    <?php the_post_thumbnail('thumbnail'); ?>
-                    <figcaption class="slider__caption">
+            <figure class="slider__figure">
 
-                    <small class="slider__meta-date"><?php the_date('j F Y'); ?></small>
-                    <span class="slider__title"><?php the_title(); ?></span>
-                    <span><?php the_excerpt(); ?></span>
-                    <a class="btn btn--slider" href="<?php the_permalink(); ?>">Noticia completa &rarr;</a>
-                    </figcaption>
-                </figure>
+                <?php the_post_thumbnail('thumbnail'); ?>
+                <figcaption class="slider__caption">
+
+                <small class="slider__meta-date"><?php the_date('j F Y'); ?></small>
+
+                <span class="slider__title"><?php the_title(); ?></span>
+
+
+                </figcaption>
+
+            </figure>
+
+                <a class="slider__btn slider__btn-call" href="<?php the_permalink(); ?>">Noticia completa &rarr;</a>
 
         <?}else {?>
 
             <a href="<?php the_permalink(); ?>">
+
                 <figure class="slider__figure">
+
                     <img src="<?php echo get_bloginfo('template_directory');?>/assets/img/logo.svg" alt="logo">
+
                     <figcaption class="slider__caption"><?php the_title(); ?></figcaption>
+
                 </figure>
+
             </a>
         
         <?}?>
@@ -437,8 +447,8 @@
     </div>
     
         <!-- Prev/next controls -->
-        <button class="slider__item__prev btn btn--slider__nav">&larr;</button>
-        <button class="slider__item__next btn btn--slider__nav">&rarr;</button>
+        <button class="slider__btn slider__btn-prev">&larr;</button>
+        <button class="slider__btn slider__btn-next">&rarr;</button>
   
     </section>
 
