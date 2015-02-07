@@ -217,18 +217,24 @@
 
     <?php elseif(get_row_layout() == "gallery"): // Layout Gallery ?>
 
-        <div class="galeria-fotos">
+        <h2 class="galeria-fotos__description">
+            
+            <?php the_sub_field("description"); ?>
+        
+        </h2>
 
+        <div class="galeria-fotos">
             <?php if (get_sub_field("title")): ?>
 
                 <h2 class="galeria-fotos__title">
-                    <?php the_sub_field("title"); ?>
+                    <?php the_sub_field("title"); ?>xx
                 </h2>
                 <h3 class="galeria-fotos__description">
                     <?php the_sub_field("description"); ?>
                 </h3>
 
             <?php endif ?>
+
             
             <?php
             $images = get_sub_field('gallery');
