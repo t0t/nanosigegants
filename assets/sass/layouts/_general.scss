@@ -48,7 +48,7 @@ img {
 
 	header:first-child {
 
-		padding: $gutterwidth ($gutterwidth * 1.5) 0 ($gutterwidth * 1.5);
+		padding: $gutterwidth ($gutterwidth * 1.5) ($gutterwidth/1.5) ($gutterwidth * 1.5);
 
 		h1 {
 			color: $background;
