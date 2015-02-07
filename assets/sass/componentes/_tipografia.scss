@@ -34,7 +34,7 @@ h1 small,
 h2 small,
 h3 small {
 	@extend %display-block;
-	@extend %padding-vertical;
+	// @extend %padding-vertical;
 	color : $black;
 	@include font-size(36);
 	font-style: italic;
