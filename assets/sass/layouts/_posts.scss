@@ -6,12 +6,14 @@
 .main-post__content {
 
 	@include padding();
-	@include flexbox;
-    @include flex-flow(row wrap);
-    @include justify-content(space-around);
+    // @include justify-content(space-around);
+
 
 	@media all and (min-width: $bp3) {
 
+		@include flexbox;
+	    @include flex-flow(row wrap);
+	    @include justify-content(space-around);
 		// width: calc(75% - #{$gutterwidth});
     
     }

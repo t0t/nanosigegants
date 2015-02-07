@@ -2,7 +2,6 @@
 .galeria {
 	//mirar el line-height del small
 	line-height : $baselineheight/2;
-    width: calc(100% - #{$gutterwidth});
 
     @media (min-width: 960px) {
 
@@ -13,16 +12,33 @@
 }
 
 	.galeria__title {
+
 		@extend %flex-basis-fullwidth;
-		margin-bottom: $gutterwidth*5;
+
+    	@media (min-width: 960px) {
+
+      		margin-bottom: $gutterwidth*5;
+
+    	}
+
 	}
 
 
 .galeria-fotos {
 
-    @include flexbox;
-	@include flex-wrap(wrap);
-    @include justify-content(space-around);
+		width: 100%;
+		// width: calc(25% - #{$gutterwidth});
+
+    	@media screen 
+    		and (orientation : lanscape)
+    		and (orientation : portrait)
+    		and (max-width: $bp3) {
+				@include flexbox;
+		    	flex-wrap: wrap !important;
+		    	@include justify-content(space-around);
+    
+    	}
+
     @extend %basepadding;
     @extend %text-center;
     
@@ -34,7 +50,7 @@
 
     @media (max-width: 960px) {
 
-    	background-color: $black-alpha-fuerte;
+    	// background-color: $black-alpha-fuerte;
       	// width: calc(35% - #{$gutterwidth});
 
     }
@@ -52,12 +68,12 @@
 
 	.galeria-fotos__figure {
 
-      	width: calc(33.33% - #{$gutterwidth});
-				
-		position: relative;
-				
-		margin-bottom: $gutterwidth*7;
+      	width: 100%;	
+		margin-bottom: $gutterwidth;
 		
+		a {
+			display: block;
+		}
 
 		img {
 
@@ -69,6 +85,9 @@
 				background-color: $color-base;
 			}
 		}
+
+		
+		@media (max-width: $bp3) {}
 
 
     	@media (min-width: 960px) {
