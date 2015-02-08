@@ -26,13 +26,14 @@
 
 .galeria-fotos {
 
-		width: 100%;
-		// width: calc(25% - #{$gutterwidth});
+	width: 100%;
+	// width: calc(25% - #{$gutterwidth});
 
     	@media screen 
     		and (orientation : lanscape)
     		and (orientation : portrait)
     		and (max-width: $bp3) {
+
 				@include flexbox;
 		    	flex-wrap: wrap !important;
 		    	@include justify-content(space-around);
@@ -87,10 +88,10 @@
 		}
 
 		
-		@media (max-width: $bp3) {}
+		@media screen and (max-width: $bp3) {}
 
 
-    	@media (min-width: 960px) {
+    	@media screen and (min-width: 960px) {
 
       		width: calc(50% - #{$gutterwidth});
     	

@@ -18,7 +18,9 @@
 	}
 
 	* {
+		
 		@include transition(.5s);
+		
 	}
 
 	@media all and (max-width:$bp2) {

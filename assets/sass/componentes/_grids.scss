@@ -28,6 +28,7 @@
   }
 
   .grid__item {
+
     list-style: none;
     margin-bottom: $gutterwidth;
 
@@ -45,13 +46,17 @@
     }
 
     @media all and (min-width: 1260px) {
+
       width: calc(50% - #{$gutterwidth});
+
     }
 
   }
 
 .grid-form {
+
   padding: 0 $gutterwidth*2;
+
 }
 
   .grid-form__item {
@@ -59,7 +64,6 @@
     list-style: none;
     margin-bottom: $gutterwidth;
 
-    //magia!!
     @media all and (min-width: $bp3) {
       width: calc(50% - #{$gutterwidth});
     }
@@ -81,5 +85,4 @@
 .col-6-6 {
   @include grid(6, 6);
 }
-
 
