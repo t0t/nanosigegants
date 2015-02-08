@@ -137,14 +137,15 @@ input[type="submit"] {
 
 select,
 input[type="file"] {
-	height : 28px;
+	height : 35px;
 	*margin-top : 4px;
-	line-height : 28px;
+	line-height : 1;
+	@include max-width($bp3);
 }
 
 select {
 	background-color : $inputbackground;
-	@include font-size(13);
+	// @include font-size(13);
 }
 
 select[multiple],

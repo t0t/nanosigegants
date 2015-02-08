@@ -4,9 +4,7 @@
 
         <section role="main">
 
-        ddddd
-
-            <?php get_template_part('template', 'home'); ?>
+            <?php get_template_part( 'templates/content' ); ?>
 
         </section>
 

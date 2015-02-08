@@ -19,10 +19,6 @@ Template Name: Portada
     <?php endif; ?> 
 
 
-    <!-- Content a pelo -->
-	<?php //get_template_part( 'templates/content' ); ?>
-
-
 </main>
 
 

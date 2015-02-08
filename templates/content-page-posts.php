@@ -5,8 +5,6 @@
     <?php get_template_part('templates/page', 'header'); ?>
 
 
-
-
     <section class="grid">
 
     <?php 
@@ -49,8 +47,30 @@
             
         <?php endwhile; ?>
         <?php wp_reset_postdata(); // reset the query ?>
+
     </section>
     <!-- /grid -->
+    
+
+    <!-- Archive -->
+    <section class="archivo">
+        
+        <h4>Arxiu</h4>
+
+        <div class="grid">
+        
+            <select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+
+            <option value="">
+                <?php echo esc_attr( __( 'Seleciona Mes' ) ); ?>
+            </option>
+
+            <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 ) ); ?>
+            </select>
+            
+        </div>
+
+    </section>
 
 
     <!-- Navegacion -->
