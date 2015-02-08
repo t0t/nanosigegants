@@ -70,7 +70,6 @@
             <!-- <div class="main-post grid-content"> -->
 
             
-            
 
 
                 <figure>
