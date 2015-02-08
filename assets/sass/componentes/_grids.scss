@@ -33,10 +33,17 @@
 
     //magia!!
     @media all and (min-width: $bp3) {
+      
       img {
+
         width: inherit;
+        float: left;
+        margin-right: $gutterwidth;
+
       }
+
     }
+
     @media all and (min-width: 1260px) {
       width: calc(50% - #{$gutterwidth});
     }

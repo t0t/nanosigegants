@@ -1048,7 +1048,7 @@ input:required:focus:valid { background-color: #4dff4d; border: 1px solid green;
 @media all and (min-width: 800px) { .grid-content__item { width: calc(50% - 3%); } }
 
 .grid__item { list-style: none; margin-bottom: 3%; }
-@media all and (min-width: 600px) { .grid__item img { width: inherit; } }
+@media all and (min-width: 600px) { .grid__item img { width: inherit; float: left; margin-right: 3%; } }
 @media all and (min-width: 1260px) { .grid__item { width: calc(50% - 3%); } }
 
 .grid-form { padding: 0 6%; }

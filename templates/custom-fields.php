@@ -95,28 +95,26 @@
                 <div class="main-post__content">
 
 
-                   <article class="main-post__content__entry">
-
                    <?php if (get_sub_field("content")): ?>
-                   
-                        <?php the_sub_field("content"); ?>
-                   
+
+                       <article class="main-post__content__entry">
+                       
+                            <?php the_sub_field("content"); ?>
+                       
+                        <?php the_tags( 'Contingut relacionat: ', ' • ', '<br />' ); ?>
+
+                        </article>
+
                     <?php endif ?>
-                   
-                    <?php the_tags( 'Contingut relacionat: ', ' • ', '<br />' ); ?>
 
-                    </article>
 
+                    <?php if (get_sub_field("gallery")): ?>
 
                     <!-- galeria -->
                     <div class="galeria">
 
+                        <h4 class="galeria__title">Galeria de fotos</h4>
 
-                        <?php if (get_sub_field("gallery")): ?>
-
-                            <h4 class="galeria__title">Galeria de fotos</h4>
-
-                        <?php endif ?>
 
                         <?php if (get_sub_field("description")): ?>
 
@@ -159,20 +157,70 @@
 
                             <small><a href="<?php the_sub_field('flickr_gallery'); ?>" target="_blank">Vols vore l'album complert a flickr?</a></small>
 
-                            <?php 
-                                //echo do_shortcode( get_sub_field( 'flickr_gallery' ) );
-                                //$album = get_sub_field("flickr_gallery");
-                                //echo do_shortcode( '[slickr-flickr  set="' . $album . '" size="large" type="gallery"]'); 
-                            ?>
-                            <?php 
-                                //echo do_shortcode('[slickr-flickr set=" ' . $album . ' " type="gallery"]');
-                                //[slickr-flickr set="72157650024401437" type="gallery"]
-                            ?>
-
                         <?php endif ?>
 
                     </div>
                     <!-- /galeria -->
+
+                    <?php endif ?>
+
+
+
+                    <!-- grid -->
+                    <?php if( have_rows('grid')): ?>
+                    <?php while (have_rows('grid')) : the_row(); ?>
+
+
+                            
+                            <?php while(has_sub_field('grid_element')): ?>  
+                            
+                                <div class="grid__item">
+
+                                    <?php if (get_sub_field("title")): ?>
+                                        <h3><?php the_sub_field('title'); ?></h3>
+                                    <?php endif ?>
+
+                                    <?php if (get_sub_field("img")): ?>
+                                        <?php $image = get_sub_field('img');
+                                    echo '<img src="'.$image['sizes']['medium'].'" />'; ?>
+                                    <?php endif ?>
+                                    
+                                    <?php if (get_sub_field("parrafo")): ?>
+                                        <p><?php the_sub_field('parrafo'); ?></p>
+                                    <?php endif ?>
+
+                                    <?php if (get_sub_field("content")): ?>
+                                        <?php the_sub_field('content'); ?>
+                                    <?php endif ?>
+
+                                    <?php if (get_sub_field("precio")): ?>
+                                        <p><?php the_sub_field('precio'); ?>€</p>
+                                        <small>+ 1&#8364; de gastos d&#8217;enviament</small>
+                                    <?php endif ?>
+
+                                    <?php if (get_sub_field("boto_paypal")): ?>
+                                        <?php the_sub_field('boto_paypal'); ?>
+                                    <?php endif ?>
+
+                                    <?php if (get_sub_field("external_url")): ?>
+                                        <?php the_sub_field('external_url'); ?>
+                                    <?php endif ?>
+
+                                    <?php if (get_sub_field("link")): ?>
+                                        <?php the_sub_field('link'); ?>
+                                    <?php endif ?>
+
+                                </div>
+                                                                
+                            <?php endwhile; ?>
+                            <!-- /grid item -->
+
+
+                    <?php 
+                    endwhile;
+                    endif;
+                    ?>
+                    <!-- /grid -->
 
 
             
@@ -510,17 +558,33 @@
             
             <?php while(has_sub_field('productos')): ?>  
             
-            <div class="tienda__item">
-            <h3><?php the_sub_field('nom'); ?></h3>
 
-        <?php $image = get_sub_field('imatge');
-        echo '<img src="'.$image['sizes']['medium'].'" />'; ?>
+                <div class="tienda__item">
 
-        <p><?php the_sub_field('preu'); ?>€</p>
-        <small>+ 1&#8364; de gastos d&#8217;enviament</small>
-        <?php the_sub_field('boto_paypal'); ?>
+                    <?php if (get_sub_field("nom")): ?>
+                        <h3><?php the_sub_field('nom'); ?></h3>
+                    <?php endif ?>
 
-            </div>
+                    <?php if (get_sub_field("descripcio")): ?>
+                        <?php $image = get_sub_field('imatge');
+                    echo '<img src="'.$image['sizes']['medium'].'" />'; ?>
+                    <?php endif ?>
+                    
+                    <?php if (get_sub_field("descripcio")): ?>
+                        <p><?php the_sub_field('descripcio'); ?>€</p>
+                    <?php endif ?>
+
+                    <?php if (get_sub_field("preu")): ?>
+                        <p><?php the_sub_field('preu'); ?>€</p>
+                        <small>+ 1&#8364; de gastos d&#8217;enviament</small>
+                    <?php endif ?>
+
+                    <?php if (get_sub_field("boto_paypal")): ?>
+                        <?php the_sub_field('boto_paypal'); ?>
+                    <?php endif ?>
+
+                </div>
+
                                         
             <?php endwhile; ?>
 
